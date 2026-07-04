@@ -1,0 +1,791 @@
+@prefix regulation: <http://regulation> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+
+regulation:DataDomain rdf:type skos:Concept ;
+  skos:prefLabel "Data Domain" ;
+  skos:broader skos:Concept .
+
+regulation:DataElement rdf:type skos:Concept ;
+  skos:prefLabel "Data Element" ;
+  skos:broader skos:Concept .
+
+regulation:US rdf:type regulation:DataDomain ;
+  skos:prefLabel "US" .
+
+regulation:assets rdf:type regulation:DataDomain ;
+  skos:prefLabel "assets" ;
+  skos:broader regulation:inflows .
+
+regulation:other rdf:type regulation:DataDomain ;
+  skos:prefLabel "other" ;
+  skos:broader regulation:inflows .
+
+regulation:secured rdf:type regulation:DataDomain ;
+  skos:prefLabel "secured" ;
+  skos:broader regulation:inflows .
+
+regulation:unsecured rdf:type regulation:DataDomain ;
+  skos:prefLabel "unsecured" ;
+  skos:broader regulation:inflows .
+
+regulation:deposits rdf:type regulation:DataDomain ;
+  skos:prefLabel "deposits" ;
+  skos:broader regulation:outflows .
+
+regulation:other rdf:type regulation:DataDomain ;
+  skos:prefLabel "other" ;
+  skos:broader regulation:outflows .
+
+regulation:secured rdf:type regulation:DataDomain ;
+  skos:prefLabel "secured" ;
+  skos:broader regulation:outflows .
+
+regulation:wholesale rdf:type regulation:DataDomain ;
+  skos:prefLabel "wholesale" ;
+  skos:broader regulation:outflows .
+
+regulation:balance_sheet rdf:type regulation:DataDomain ;
+  skos:prefLabel "balance sheet" ;
+  skos:broader regulation:supplemental .
+
+regulation:derivatives_collateral rdf:type regulation:DataDomain ;
+  skos:prefLabel "derivatives collateral" ;
+  skos:broader regulation:supplemental .
+
+regulation:foreign_exchange rdf:type regulation:DataDomain ;
+  skos:prefLabel "foreign exchange" ;
+  skos:broader regulation:supplemental .
+
+regulation:informational rdf:type regulation:DataDomain ;
+  skos:prefLabel "informational" ;
+  skos:broader regulation:supplemental .
+
+regulation:liquidity_risk_measurement rdf:type regulation:DataDomain ;
+  skos:prefLabel "liquidity risk measurement" ;
+  skos:broader regulation:supplemental .
+
+regulation:inflows rdf:type regulation:DataDomain ;
+  skos:prefLabel "inflows" ;
+  skos:broader regulation:data_tables .
+
+regulation:outflows rdf:type regulation:DataDomain ;
+  skos:prefLabel "outflows" ;
+  skos:broader regulation:data_tables .
+
+regulation:supplemental rdf:type regulation:DataDomain ;
+  skos:prefLabel "supplemental" ;
+  skos:broader regulation:data_tables .
+
+regulation:accounting_designation rdf:type regulation:DataDomain ;
+  skos:prefLabel "accounting designation" ;
+  skos:broader regulation:fields .
+
+regulation:business_line rdf:type regulation:DataDomain ;
+  skos:prefLabel "business line" ;
+  skos:broader regulation:fields .
+
+regulation:collateral_class rdf:type regulation:DataDomain ;
+  skos:prefLabel "collateral class" ;
+  skos:broader regulation:fields .
+
+regulation:collateral_level rdf:type regulation:DataDomain ;
+  skos:prefLabel "collateral level" ;
+  skos:broader regulation:fields .
+
+regulation:collateral_value rdf:type regulation:DataDomain ;
+  skos:prefLabel "collateral value" ;
+  skos:broader regulation:fields .
+
+regulation:collection rdf:type regulation:DataDomain ;
+  skos:prefLabel "collection" ;
+  skos:broader regulation:fields .
+
+regulation:collection_reference rdf:type regulation:DataDomain ;
+  skos:prefLabel "collection reference" ;
+  skos:broader regulation:fields .
+
+regulation:comments rdf:type regulation:DataDomain ;
+  skos:prefLabel "comments" ;
+  skos:broader regulation:fields .
+
+regulation:converted rdf:type regulation:DataDomain ;
+  skos:prefLabel "converted" ;
+  skos:broader regulation:fields .
+
+regulation:counterparty rdf:type regulation:DataDomain ;
+  skos:prefLabel "counterparty" ;
+  skos:broader regulation:fields .
+
+regulation:currency rdf:type regulation:DataDomain ;
+  skos:prefLabel "currency" ;
+  skos:broader regulation:fields .
+
+regulation:effective_maturity_bucket rdf:type regulation:DataDomain ;
+  skos:prefLabel "effective maturity bucket" ;
+  skos:broader regulation:fields .
+
+regulation:encumbrance_type rdf:type regulation:DataDomain ;
+  skos:prefLabel "encumbrance type" ;
+  skos:broader regulation:fields .
+
+regulation:foreign_exchange_option_direction rdf:type regulation:DataDomain ;
+  skos:prefLabel "foreign exchange option direction" ;
+  skos:broader regulation:fields .
+
+regulation:forward_start_amount rdf:type regulation:DataDomain ;
+  skos:prefLabel "forward start amount" ;
+  skos:broader regulation:fields .
+
+regulation:forward_start_amount_currency_1 rdf:type regulation:DataDomain ;
+  skos:prefLabel "forward start amount currency 1" ;
+  skos:broader regulation:fields .
+
+regulation:forward_start_amount_currency_2 rdf:type regulation:DataDomain ;
+  skos:prefLabel "forward start amount currency 2" ;
+  skos:broader regulation:fields .
+
+regulation:forward_start_bucket rdf:type regulation:DataDomain ;
+  skos:prefLabel "forward start bucket" ;
+  skos:broader regulation:fields .
+
+regulation:GSIB rdf:type regulation:DataDomain ;
+  skos:prefLabel "GSIB" ;
+  skos:broader regulation:fields .
+
+regulation:insured rdf:type regulation:DataDomain ;
+  skos:prefLabel "insured" ;
+  skos:broader regulation:fields .
+
+regulation:internal rdf:type regulation:DataDomain ;
+  skos:prefLabel "internal" ;
+  skos:broader regulation:fields .
+
+regulation:internal_counterparty rdf:type regulation:DataDomain ;
+  skos:prefLabel "internal counterparty" ;
+  skos:broader regulation:fields .
+
+regulation:lendable_value rdf:type regulation:DataDomain ;
+  skos:prefLabel "lendable value" ;
+  skos:broader regulation:fields .
+
+regulation:loss_absorbency rdf:type regulation:DataDomain ;
+  skos:prefLabel "loss absorbency" ;
+  skos:broader regulation:fields .
+
+regulation:market_value rdf:type regulation:DataDomain ;
+  skos:prefLabel "market value" ;
+  skos:broader regulation:fields .
+
+regulation:maturity_amount rdf:type regulation:DataDomain ;
+  skos:prefLabel "maturity amount" ;
+  skos:broader regulation:fields .
+
+regulation:maturity_amount_currency_1 rdf:type regulation:DataDomain ;
+  skos:prefLabel "maturity amount currency 1" ;
+  skos:broader regulation:fields .
+
+regulation:maturity_amount_currency_2 rdf:type regulation:DataDomain ;
+  skos:prefLabel "maturity amount currency 2" ;
+  skos:broader regulation:fields .
+
+regulation:maturity_bucket rdf:type regulation:DataDomain ;
+  skos:prefLabel "maturity bucket" ;
+  skos:broader regulation:fields .
+
+regulation:maturity_optionality rdf:type regulation:DataDomain ;
+  skos:prefLabel "maturity optionality" ;
+  skos:broader regulation:fields .
+
+regulation:netting_eligible rdf:type regulation:DataDomain ;
+  skos:prefLabel "netting eligible" ;
+  skos:broader regulation:fields .
+
+regulation:product rdf:type regulation:DataDomain ;
+  skos:prefLabel "product" ;
+  skos:broader regulation:fields .
+
+regulation:product_reference rdf:type regulation:DataDomain ;
+  skos:prefLabel "product reference" ;
+  skos:broader regulation:fields .
+
+regulation:rehypothecated rdf:type regulation:DataDomain ;
+  skos:prefLabel "rehypothecated" ;
+  skos:broader regulation:fields .
+
+regulation:reporting_entity rdf:type regulation:DataDomain ;
+  skos:prefLabel "reporting entity" ;
+  skos:broader regulation:fields .
+
+regulation:risk_weight rdf:type regulation:DataDomain ;
+  skos:prefLabel "risk weight" ;
+  skos:broader regulation:fields .
+
+regulation:settlement rdf:type regulation:DataDomain ;
+  skos:prefLabel "settlement" ;
+  skos:broader regulation:fields .
+
+regulation:sub_product rdf:type regulation:DataDomain ;
+  skos:prefLabel "sub product" ;
+  skos:broader regulation:fields .
+
+regulation:sub_product_2 rdf:type regulation:DataDomain ;
+  skos:prefLabel "sub product 2" ;
+  skos:broader regulation:fields .
+
+regulation:sub_product_reference rdf:type regulation:DataDomain ;
+  skos:prefLabel "sub product reference" ;
+  skos:broader regulation:fields .
+
+regulation:treasury_control rdf:type regulation:DataDomain ;
+  skos:prefLabel "treasury control" ;
+  skos:broader regulation:fields .
+
+regulation:trigger rdf:type regulation:DataDomain ;
+  skos:prefLabel "trigger" ;
+  skos:broader regulation:fields .
+
+regulation:unencumbered rdf:type regulation:DataDomain ;
+  skos:prefLabel "unencumbered" ;
+  skos:broader regulation:fields .
+
+regulation:data_tables rdf:type regulation:DataDomain ;
+  skos:prefLabel "data tables" ;
+  skos:broader regulation:FR_2052_A .
+
+regulation:fields rdf:type regulation:DataDomain ;
+  skos:prefLabel "fields" ;
+  skos:broader regulation:FR_2052_A .
+
+regulation:assets rdf:type regulation:DataDomain ;
+  skos:prefLabel "assets" ;
+  skos:broader regulation:inflows .
+
+regulation:other rdf:type regulation:DataDomain ;
+  skos:prefLabel "other" ;
+  skos:broader regulation:inflows .
+
+regulation:secured rdf:type regulation:DataDomain ;
+  skos:prefLabel "secured" ;
+  skos:broader regulation:inflows .
+
+regulation:unsecured rdf:type regulation:DataDomain ;
+  skos:prefLabel "unsecured" ;
+  skos:broader regulation:inflows .
+
+regulation:deposits rdf:type regulation:DataDomain ;
+  skos:prefLabel "deposits" ;
+  skos:broader regulation:outflows .
+
+regulation:other rdf:type regulation:DataDomain ;
+  skos:prefLabel "other" ;
+  skos:broader regulation:outflows .
+
+regulation:secured rdf:type regulation:DataDomain ;
+  skos:prefLabel "secured" ;
+  skos:broader regulation:outflows .
+
+regulation:wholesale rdf:type regulation:DataDomain ;
+  skos:prefLabel "wholesale" ;
+  skos:broader regulation:outflows .
+
+regulation:derivatives_collateral rdf:type regulation:DataDomain ;
+  skos:prefLabel "derivatives collateral" ;
+  skos:broader regulation:supplemental .
+
+regulation:liquidity_risk_measurement rdf:type regulation:DataDomain ;
+  skos:prefLabel "liquidity risk measurement" ;
+  skos:broader regulation:supplemental .
+
+regulation:aggregated_rule_balances rdf:type regulation:DataDomain ;
+  skos:prefLabel "aggregated rule balances" ;
+  skos:broader regulation:LCR .
+
+regulation:amount_calculations rdf:type regulation:DataDomain ;
+  skos:prefLabel "amount calculations" ;
+  skos:broader regulation:LCR .
+
+regulation:asset_category rdf:type regulation:DataDomain ;
+  skos:prefLabel "asset category" ;
+  skos:broader regulation:LCR .
+
+regulation:basics rdf:type regulation:DataDomain ;
+  skos:prefLabel "basics" ;
+  skos:broader regulation:LCR .
+
+regulation:calculations rdf:type regulation:DataDomain ;
+  skos:prefLabel "calculations" ;
+  skos:broader regulation:LCR .
+
+regulation:field_type rdf:type regulation:DataDomain ;
+  skos:prefLabel "field type" ;
+  skos:broader regulation:LCR .
+
+regulation:HQLA_amount_values rdf:type regulation:DataDomain ;
+  skos:prefLabel "HQLA amount values" ;
+  skos:broader regulation:LCR .
+
+regulation:inflows rdf:type regulation:DataDomain ;
+  skos:prefLabel "inflows" ;
+  skos:broader regulation:LCR .
+
+regulation:major_central_bank rdf:type regulation:DataDomain ;
+  skos:prefLabel "major central bank" ;
+  skos:broader regulation:LCR .
+
+regulation:outflows rdf:type regulation:DataDomain ;
+  skos:prefLabel "outflows" ;
+  skos:broader regulation:LCR .
+
+regulation:ratio rdf:type regulation:DataDomain ;
+  skos:prefLabel "ratio" ;
+  skos:broader regulation:LCR .
+
+regulation:rule rdf:type regulation:DataDomain ;
+  skos:prefLabel "rule" ;
+  skos:broader regulation:LCR .
+
+regulation:rules rdf:type regulation:DataDomain ;
+  skos:prefLabel "rules" ;
+  skos:broader regulation:LCR .
+
+regulation:sub_product rdf:type regulation:DataDomain ;
+  skos:prefLabel "sub product" ;
+  skos:broader regulation:LCR .
+
+regulation:supplemental rdf:type regulation:DataDomain ;
+  skos:prefLabel "supplemental" ;
+  skos:broader regulation:LCR .
+
+regulation:weights rdf:type regulation:DataDomain ;
+  skos:prefLabel "weights" ;
+  skos:broader regulation:LCR .
+
+regulation:maturity_bucket_preprocessing rdf:type regulation:DataDomain ;
+  skos:prefLabel "maturity bucket preprocessing" ;
+  skos:broader regulation:preprocessing .
+
+regulation:FR_2052_A rdf:type regulation:DataDomain ;
+  skos:prefLabel "FR 2052 A" ;
+  skos:broader regulation:US .
+
+regulation:LCR rdf:type regulation:DataDomain ;
+  skos:prefLabel "LCR" ;
+  skos:broader regulation:US .
+
+regulation:preprocessing rdf:type regulation:DataDomain ;
+  skos:prefLabel "preprocessing" ;
+  skos:broader regulation:US .
+
+regulation:data_tables rdf:type regulation:DataElement ;
+  skos:prefLabel "data tables" ;
+  skos:broader regulation:data_tables .
+
+regulation:inflows rdf:type regulation:DataElement ;
+  skos:prefLabel "inflows" ;
+  skos:broader regulation:data_tables .
+
+regulation:outflows rdf:type regulation:DataElement ;
+  skos:prefLabel "outflows" ;
+  skos:broader regulation:data_tables .
+
+regulation:supplemental rdf:type regulation:DataElement ;
+  skos:prefLabel "supplemental" ;
+  skos:broader regulation:data_tables .
+
+regulation:inflows rdf:type regulation:DataElement ;
+  skos:prefLabel "inflows" ;
+  skos:broader regulation:inflows .
+
+regulation:assets rdf:type regulation:DataElement ;
+  skos:prefLabel "assets" ;
+  skos:broader regulation:assets .
+
+regulation:product rdf:type regulation:DataElement ;
+  skos:prefLabel "product" ;
+  skos:broader regulation:assets .
+
+regulation:other rdf:type regulation:DataElement ;
+  skos:prefLabel "other" ;
+  skos:broader regulation:other .
+
+regulation:product rdf:type regulation:DataElement ;
+  skos:prefLabel "product" ;
+  skos:broader regulation:other .
+
+regulation:product rdf:type regulation:DataElement ;
+  skos:prefLabel "product" ;
+  skos:broader regulation:secured .
+
+regulation:secured rdf:type regulation:DataElement ;
+  skos:prefLabel "secured" ;
+  skos:broader regulation:secured .
+
+regulation:product rdf:type regulation:DataElement ;
+  skos:prefLabel "product" ;
+  skos:broader regulation:unsecured .
+
+regulation:unsecured rdf:type regulation:DataElement ;
+  skos:prefLabel "unsecured" ;
+  skos:broader regulation:unsecured .
+
+regulation:outflows rdf:type regulation:DataElement ;
+  skos:prefLabel "outflows" ;
+  skos:broader regulation:outflows .
+
+regulation:deposits rdf:type regulation:DataElement ;
+  skos:prefLabel "deposits" ;
+  skos:broader regulation:deposits .
+
+regulation:product rdf:type regulation:DataElement ;
+  skos:prefLabel "product" ;
+  skos:broader regulation:deposits .
+
+regulation:other rdf:type regulation:DataElement ;
+  skos:prefLabel "other" ;
+  skos:broader regulation:other .
+
+regulation:product rdf:type regulation:DataElement ;
+  skos:prefLabel "product" ;
+  skos:broader regulation:other .
+
+regulation:product rdf:type regulation:DataElement ;
+  skos:prefLabel "product" ;
+  skos:broader regulation:secured .
+
+regulation:secured rdf:type regulation:DataElement ;
+  skos:prefLabel "secured" ;
+  skos:broader regulation:secured .
+
+regulation:product rdf:type regulation:DataElement ;
+  skos:prefLabel "product" ;
+  skos:broader regulation:wholesale .
+
+regulation:wholesale rdf:type regulation:DataElement ;
+  skos:prefLabel "wholesale" ;
+  skos:broader regulation:wholesale .
+
+regulation:supplemental rdf:type regulation:DataElement ;
+  skos:prefLabel "supplemental" ;
+  skos:broader regulation:supplemental .
+
+regulation:balance_sheet rdf:type regulation:DataElement ;
+  skos:prefLabel "balance sheet" ;
+  skos:broader regulation:balance_sheet .
+
+regulation:product rdf:type regulation:DataElement ;
+  skos:prefLabel "product" ;
+  skos:broader regulation:balance_sheet .
+
+regulation:derivatives_collateral rdf:type regulation:DataElement ;
+  skos:prefLabel "derivatives collateral" ;
+  skos:broader regulation:derivatives_collateral .
+
+regulation:product rdf:type regulation:DataElement ;
+  skos:prefLabel "product" ;
+  skos:broader regulation:derivatives_collateral .
+
+regulation:foreign_exchange rdf:type regulation:DataElement ;
+  skos:prefLabel "foreign exchange" ;
+  skos:broader regulation:foreign_exchange .
+
+regulation:product rdf:type regulation:DataElement ;
+  skos:prefLabel "product" ;
+  skos:broader regulation:foreign_exchange .
+
+regulation:informational rdf:type regulation:DataElement ;
+  skos:prefLabel "informational" ;
+  skos:broader regulation:informational .
+
+regulation:product rdf:type regulation:DataElement ;
+  skos:prefLabel "product" ;
+  skos:broader regulation:informational .
+
+regulation:liquidity_risk_measurement rdf:type regulation:DataElement ;
+  skos:prefLabel "liquidity risk measurement" ;
+  skos:broader regulation:liquidity_risk_measurement .
+
+regulation:product rdf:type regulation:DataElement ;
+  skos:prefLabel "product" ;
+  skos:broader regulation:liquidity_risk_measurement .
+
+regulation:accounting_designation rdf:type regulation:DataElement ;
+  skos:prefLabel "accounting designation" ;
+  skos:broader regulation:accounting_designation .
+
+regulation:business_line rdf:type regulation:DataElement ;
+  skos:prefLabel "business line" ;
+  skos:broader regulation:business_line .
+
+regulation:asset_category rdf:type regulation:DataElement ;
+  skos:prefLabel "asset category" ;
+  skos:broader regulation:collateral_class .
+
+regulation:collateral_class rdf:type regulation:DataElement ;
+  skos:prefLabel "collateral class" ;
+  skos:broader regulation:collateral_class .
+
+regulation:collateral_level rdf:type regulation:DataElement ;
+  skos:prefLabel "collateral level" ;
+  skos:broader regulation:collateral_level .
+
+regulation:collateral_value rdf:type regulation:DataElement ;
+  skos:prefLabel "collateral value" ;
+  skos:broader regulation:collateral_value .
+
+regulation:collection rdf:type regulation:DataElement ;
+  skos:prefLabel "collection" ;
+  skos:broader regulation:collection .
+
+regulation:collection_reference rdf:type regulation:DataElement ;
+  skos:prefLabel "collection reference" ;
+  skos:broader regulation:collection_reference .
+
+regulation:comments rdf:type regulation:DataElement ;
+  skos:prefLabel "comments" ;
+  skos:broader regulation:comments .
+
+regulation:converted rdf:type regulation:DataElement ;
+  skos:prefLabel "converted" ;
+  skos:broader regulation:converted .
+
+regulation:counterparty rdf:type regulation:DataElement ;
+  skos:prefLabel "counterparty" ;
+  skos:broader regulation:counterparty .
+
+regulation:currency rdf:type regulation:DataElement ;
+  skos:prefLabel "currency" ;
+  skos:broader regulation:currency .
+
+regulation:effective_maturity_bucket rdf:type regulation:DataElement ;
+  skos:prefLabel "effective maturity bucket" ;
+  skos:broader regulation:effective_maturity_bucket .
+
+regulation:encumbrance_type rdf:type regulation:DataElement ;
+  skos:prefLabel "encumbrance type" ;
+  skos:broader regulation:encumbrance_type .
+
+regulation:foreign_exchange_option_direction rdf:type regulation:DataElement ;
+  skos:prefLabel "foreign exchange option direction" ;
+  skos:broader regulation:foreign_exchange_option_direction .
+
+regulation:forward_start_amount rdf:type regulation:DataElement ;
+  skos:prefLabel "forward start amount" ;
+  skos:broader regulation:forward_start_amount .
+
+regulation:forward_start_amount_currency_1 rdf:type regulation:DataElement ;
+  skos:prefLabel "forward start amount currency 1" ;
+  skos:broader regulation:forward_start_amount_currency_1 .
+
+regulation:forward_start_amount_currency_2 rdf:type regulation:DataElement ;
+  skos:prefLabel "forward start amount currency 2" ;
+  skos:broader regulation:forward_start_amount_currency_2 .
+
+regulation:forward_start_bucket rdf:type regulation:DataElement ;
+  skos:prefLabel "forward start bucket" ;
+  skos:broader regulation:forward_start_bucket .
+
+regulation:GSIB rdf:type regulation:DataElement ;
+  skos:prefLabel "GSIB" ;
+  skos:broader regulation:GSIB .
+
+regulation:insured rdf:type regulation:DataElement ;
+  skos:prefLabel "insured" ;
+  skos:broader regulation:insured .
+
+regulation:internal rdf:type regulation:DataElement ;
+  skos:prefLabel "internal" ;
+  skos:broader regulation:internal .
+
+regulation:internal_counterparty rdf:type regulation:DataElement ;
+  skos:prefLabel "internal counterparty" ;
+  skos:broader regulation:internal_counterparty .
+
+regulation:lendable_value rdf:type regulation:DataElement ;
+  skos:prefLabel "lendable value" ;
+  skos:broader regulation:lendable_value .
+
+regulation:loss_absorbency rdf:type regulation:DataElement ;
+  skos:prefLabel "loss absorbency" ;
+  skos:broader regulation:loss_absorbency .
+
+regulation:market_value rdf:type regulation:DataElement ;
+  skos:prefLabel "market value" ;
+  skos:broader regulation:market_value .
+
+regulation:maturity_amount rdf:type regulation:DataElement ;
+  skos:prefLabel "maturity amount" ;
+  skos:broader regulation:maturity_amount .
+
+regulation:maturity_amount_currency_1 rdf:type regulation:DataElement ;
+  skos:prefLabel "maturity amount currency 1" ;
+  skos:broader regulation:maturity_amount_currency_1 .
+
+regulation:maturity_amount_currency_2 rdf:type regulation:DataElement ;
+  skos:prefLabel "maturity amount currency 2" ;
+  skos:broader regulation:maturity_amount_currency_2 .
+
+regulation:from_date rdf:type regulation:DataElement ;
+  skos:prefLabel "from date" ;
+  skos:broader regulation:maturity_bucket .
+
+regulation:maturity_bucket rdf:type regulation:DataElement ;
+  skos:prefLabel "maturity bucket" ;
+  skos:broader regulation:maturity_bucket .
+
+regulation:maturity_optionality rdf:type regulation:DataElement ;
+  skos:prefLabel "maturity optionality" ;
+  skos:broader regulation:maturity_optionality .
+
+regulation:netting_eligible rdf:type regulation:DataElement ;
+  skos:prefLabel "netting eligible" ;
+  skos:broader regulation:netting_eligible .
+
+regulation:product rdf:type regulation:DataElement ;
+  skos:prefLabel "product" ;
+  skos:broader regulation:product .
+
+regulation:product_code rdf:type regulation:DataElement ;
+  skos:prefLabel "product code" ;
+  skos:broader regulation:product .
+
+regulation:section_code rdf:type regulation:DataElement ;
+  skos:prefLabel "section code" ;
+  skos:broader regulation:product .
+
+regulation:table_code rdf:type regulation:DataElement ;
+  skos:prefLabel "table code" ;
+  skos:broader regulation:product .
+
+regulation:product_reference rdf:type regulation:DataElement ;
+  skos:prefLabel "product reference" ;
+  skos:broader regulation:product_reference .
+
+regulation:rehypothecated rdf:type regulation:DataElement ;
+  skos:prefLabel "rehypothecated" ;
+  skos:broader regulation:rehypothecated .
+
+regulation:reporting_entity rdf:type regulation:DataElement ;
+  skos:prefLabel "reporting entity" ;
+  skos:broader regulation:reporting_entity .
+
+regulation:risk_weight rdf:type regulation:DataElement ;
+  skos:prefLabel "risk weight" ;
+  skos:broader regulation:risk_weight .
+
+regulation:settlement rdf:type regulation:DataElement ;
+  skos:prefLabel "settlement" ;
+  skos:broader regulation:settlement .
+
+regulation:sub_product rdf:type regulation:DataElement ;
+  skos:prefLabel "sub product" ;
+  skos:broader regulation:sub_product .
+
+regulation:sub_product_2 rdf:type regulation:DataElement ;
+  skos:prefLabel "sub product 2" ;
+  skos:broader regulation:sub_product_2 .
+
+regulation:sub_product_reference rdf:type regulation:DataElement ;
+  skos:prefLabel "sub product reference" ;
+  skos:broader regulation:sub_product_reference .
+
+regulation:treasury_control rdf:type regulation:DataElement ;
+  skos:prefLabel "treasury control" ;
+  skos:broader regulation:treasury_control .
+
+regulation:trigger rdf:type regulation:DataElement ;
+  skos:prefLabel "trigger" ;
+  skos:broader regulation:trigger .
+
+regulation:unencumbered rdf:type regulation:DataElement ;
+  skos:prefLabel "unencumbered" ;
+  skos:broader regulation:unencumbered .
+
+regulation:asset_category rdf:type regulation:DataElement ;
+  skos:prefLabel "asset category" ;
+  skos:broader regulation:asset_category .
+
+regulation:category rdf:type regulation:DataElement ;
+  skos:prefLabel "category" ;
+  skos:broader regulation:asset_category .
+
+regulation:balance rdf:type regulation:DataElement ;
+  skos:prefLabel "balance" ;
+  skos:broader regulation:basics .
+
+regulation:haircut rdf:type regulation:DataElement ;
+  skos:prefLabel "haircut" ;
+  skos:broader regulation:basics .
+
+regulation:ratio rdf:type regulation:DataElement ;
+  skos:prefLabel "ratio" ;
+  skos:broader regulation:basics .
+
+regulation:bank_category rdf:type regulation:DataElement ;
+  skos:prefLabel "bank category" ;
+  skos:broader regulation:calculations .
+
+regulation:numeric rdf:type regulation:DataElement ;
+  skos:prefLabel "numeric" ;
+  skos:broader regulation:field_type .
+
+regulation:percent rdf:type regulation:DataElement ;
+  skos:prefLabel "percent" ;
+  skos:broader regulation:field_type .
+
+regulation:text rdf:type regulation:DataElement ;
+  skos:prefLabel "text" ;
+  skos:broader regulation:field_type .
+
+regulation:major_central_bank rdf:type regulation:DataElement ;
+  skos:prefLabel "major central bank" ;
+  skos:broader regulation:major_central_bank .
+
+regulation:ratio rdf:type regulation:DataElement ;
+  skos:prefLabel "ratio" ;
+  skos:broader regulation:ratio .
+
+regulation:rule rdf:type regulation:DataElement ;
+  skos:prefLabel "rule" ;
+  skos:broader regulation:rule .
+
+regulation:rule_balance rdf:type regulation:DataElement ;
+  skos:prefLabel "rule balance" ;
+  skos:broader regulation:rules .
+
+regulation:rule_name rdf:type regulation:DataElement ;
+  skos:prefLabel "rule name" ;
+  skos:broader regulation:rules .
+
+regulation:weight rdf:type regulation:DataElement ;
+  skos:prefLabel "weight" ;
+  skos:broader regulation:rules .
+
+regulation:sub_product rdf:type regulation:DataElement ;
+  skos:prefLabel "sub product" ;
+  skos:broader regulation:sub_product .
+
+regulation:weight rdf:type regulation:DataElement ;
+  skos:prefLabel "weight" ;
+  skos:broader regulation:weights .
+
+regulation:inflows_product_category rdf:type regulation:DataElement ;
+  skos:prefLabel "inflows product category" ;
+  skos:broader regulation:maturity_bucket_preprocessing .
+
+regulation:maturity_bucket rdf:type regulation:DataElement ;
+  skos:prefLabel "maturity bucket" ;
+  skos:broader regulation:maturity_bucket_preprocessing .
+
+regulation:maturity_bucket_bank_category rdf:type regulation:DataElement ;
+  skos:prefLabel "maturity bucket bank category" ;
+  skos:broader regulation:maturity_bucket_preprocessing .
+
+regulation:product_type rdf:type regulation:DataElement ;
+  skos:prefLabel "product type" ;
+  skos:broader regulation:maturity_bucket_preprocessing .
+
+regulation:T_plus_N rdf:type regulation:DataElement ;
+  skos:prefLabel "T plus N" ;
+  skos:broader regulation:maturity_bucket_preprocessing .
+
