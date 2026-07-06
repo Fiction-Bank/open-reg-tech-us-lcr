@@ -1,0 +1,4760 @@
+[
+  {
+    "entityType": "dataset",
+    "entityUrn": "urn:li:dataset:(urn:li:dataPlatform:lcr,fr2052a.inflows.assets,PROD)",
+    "aspectName": "datasetProperties",
+    "changeType": "UPSERT",
+    "aspect": {
+      "__type": "DatasetProperties",
+      "name": "FR 2052A \u2014 Inflows \u2014 Assets",
+      "description": "Logical model for the FR 2052A Inflows \u2014 Assets data table, derived from the Morphir/Elm LCR reference implementation.\n\n**Product**: Capacity, EncumberedAssets, ForwardAssetPurchases, RestrictedReserveBalances, UnencumberedAssets, UnrestrictedReserveBalances, UnsettledAssetPurchases",
+      "externalUrl": "https://github.com/acryldata/open-reg-tech-us-lcr",
+      "customProperties": {
+        "section": "Inflows",
+        "table": "Assets",
+        "morphir_module": "us.fr2052a.datatables.inflows.assets",
+        "source": "morphir-ir.json"
+      }
+    }
+  },
+  {
+    "entityType": "dataset",
+    "entityUrn": "urn:li:dataset:(urn:li:dataPlatform:lcr,fr2052a.inflows.assets,PROD)",
+    "aspectName": "subTypes",
+    "changeType": "UPSERT",
+    "aspect": {
+      "__type": "SubTypes",
+      "typeNames": [
+        "Logical Model"
+      ]
+    }
+  },
+  {
+    "entityType": "dataset",
+    "entityUrn": "urn:li:dataset:(urn:li:dataPlatform:lcr,fr2052a.inflows.assets,PROD)",
+    "aspectName": "dataPlatformInstance",
+    "changeType": "UPSERT",
+    "aspect": {
+      "__type": "DataPlatformInstance",
+      "platform": "urn:li:dataPlatform:lcr"
+    }
+  },
+  {
+    "entityType": "dataset",
+    "entityUrn": "urn:li:dataset:(urn:li:dataPlatform:lcr,fr2052a.inflows.assets,PROD)",
+    "aspectName": "schemaMetadata",
+    "changeType": "UPSERT",
+    "aspect": {
+      "__type": "SchemaMetadata",
+      "schemaName": "fr2052a.inflows.assets",
+      "platform": "urn:li:dataPlatform:lcr",
+      "version": 0,
+      "hash": "",
+      "platformSchema": {
+        "__type": "OtherSchema",
+        "rawSchema": ""
+      },
+      "fields": [
+        {
+          "fieldPath": "currency",
+          "type": {
+            "type": {
+              "string": {}
+            }
+          },
+          "nativeDataType": "Currency",
+          "nullable": false,
+          "description": "FR 2052A field: Currency",
+          "isPartOfKey": false,
+          "recursive": false,
+          "glossaryTerms": {
+            "terms": [
+              {
+                "urn": "urn:li:glossaryTerm:MDRM.currency",
+                "context": null
+              }
+            ],
+            "auditStamp": {
+              "time": 0,
+              "actor": "urn:li:corpuser:datahub"
+            }
+          }
+        },
+        {
+          "fieldPath": "converted",
+          "type": {
+            "type": {
+              "string": {}
+            }
+          },
+          "nativeDataType": "Converted",
+          "nullable": false,
+          "description": "FR 2052A field: Converted",
+          "isPartOfKey": false,
+          "recursive": false
+        },
+        {
+          "fieldPath": "reportingEntity",
+          "type": {
+            "type": {
+              "string": {}
+            }
+          },
+          "nativeDataType": "Reporting Entity",
+          "nullable": false,
+          "description": "FR 2052A field: Reporting Entity",
+          "isPartOfKey": false,
+          "recursive": false
+        },
+        {
+          "fieldPath": "product",
+          "type": {
+            "type": {
+              "string": {}
+            }
+          },
+          "nativeDataType": "Product",
+          "nullable": false,
+          "description": "FR 2052A field: Product",
+          "isPartOfKey": false,
+          "recursive": false
+        },
+        {
+          "fieldPath": "subProduct",
+          "type": {
+            "type": {
+              "string": {}
+            }
+          },
+          "nativeDataType": "Maybe",
+          "nullable": false,
+          "description": "FR 2052A field: Sub Product",
+          "isPartOfKey": false,
+          "recursive": false
+        },
+        {
+          "fieldPath": "marketValue",
+          "type": {
+            "type": {
+              "string": {}
+            }
+          },
+          "nativeDataType": "Market Value",
+          "nullable": false,
+          "description": "FR 2052A field: Market Value",
+          "isPartOfKey": false,
+          "recursive": false,
+          "glossaryTerms": {
+            "terms": [
+              {
+                "urn": "urn:li:glossaryTerm:MDRM.marketValue",
+                "context": null
+              }
+            ],
+            "auditStamp": {
+              "time": 0,
+              "actor": "urn:li:corpuser:datahub"
+            }
+          }
+        },
+        {
+          "fieldPath": "lendableValue",
+          "type": {
+            "type": {
+              "string": {}
+            }
+          },
+          "nativeDataType": "Lendable Value",
+          "nullable": false,
+          "description": "FR 2052A field: Lendable Value",
+          "isPartOfKey": false,
+          "recursive": false
+        },
+        {
+          "fieldPath": "maturityBucket",
+          "type": {
+            "type": {
+              "string": {}
+            }
+          },
+          "nativeDataType": "Maturity Bucket",
+          "nullable": false,
+          "description": "FR 2052A field: Maturity Bucket",
+          "isPartOfKey": false,
+          "recursive": false,
+          "glossaryTerms": {
+            "terms": [
+              {
+                "urn": "urn:li:glossaryTerm:MDRM.maturityBucket",
+                "context": null
+              }
+            ],
+            "auditStamp": {
+              "time": 0,
+              "actor": "urn:li:corpuser:datahub"
+            }
+          }
+        },
+        {
+          "fieldPath": "forwardStartAmount",
+          "type": {
+            "type": {
+              "string": {}
+            }
+          },
+          "nativeDataType": "Maybe",
+          "nullable": false,
+          "description": "FR 2052A field: Forward Start Amount",
+          "isPartOfKey": false,
+          "recursive": false
+        },
+        {
+          "fieldPath": "forwardStartBucket",
+          "type": {
+            "type": {
+              "string": {}
+            }
+          },
+          "nativeDataType": "Maybe",
+          "nullable": false,
+          "description": "FR 2052A field: Forward Start Bucket",
+          "isPartOfKey": false,
+          "recursive": false
+        },
+        {
+          "fieldPath": "collateralClass",
+          "type": {
+            "type": {
+              "string": {}
+            }
+          },
+          "nativeDataType": "Collateral Class",
+          "nullable": false,
+          "description": "FR 2052A field: Collateral Class",
+          "isPartOfKey": false,
+          "recursive": false,
+          "glossaryTerms": {
+            "terms": [
+              {
+                "urn": "urn:li:glossaryTerm:MDRM.collateralClass",
+                "context": null
+              }
+            ],
+            "auditStamp": {
+              "time": 0,
+              "actor": "urn:li:corpuser:datahub"
+            }
+          }
+        },
+        {
+          "fieldPath": "treasuryControl",
+          "type": {
+            "type": {
+              "string": {}
+            }
+          },
+          "nativeDataType": "Treasury Control",
+          "nullable": false,
+          "description": "FR 2052A field: Treasury Control",
+          "isPartOfKey": false,
+          "recursive": false
+        },
+        {
+          "fieldPath": "accountingDesignation",
+          "type": {
+            "type": {
+              "string": {}
+            }
+          },
+          "nativeDataType": "Accounting Designation",
+          "nullable": false,
+          "description": "FR 2052A field: Accounting Designation",
+          "isPartOfKey": false,
+          "recursive": false
+        },
+        {
+          "fieldPath": "effectiveMaturityBucket",
+          "type": {
+            "type": {
+              "string": {}
+            }
+          },
+          "nativeDataType": "Maybe",
+          "nullable": false,
+          "description": "FR 2052A field: Effective Maturity Bucket",
+          "isPartOfKey": false,
+          "recursive": false
+        },
+        {
+          "fieldPath": "encumbranceType",
+          "type": {
+            "type": {
+              "string": {}
+            }
+          },
+          "nativeDataType": "Maybe",
+          "nullable": false,
+          "description": "FR 2052A field: Encumbrance Type",
+          "isPartOfKey": false,
+          "recursive": false
+        },
+        {
+          "fieldPath": "internalCounterparty",
+          "type": {
+            "type": {
+              "string": {}
+            }
+          },
+          "nativeDataType": "Maybe",
+          "nullable": false,
+          "description": "FR 2052A field: Internal Counterparty",
+          "isPartOfKey": false,
+          "recursive": false
+        },
+        {
+          "fieldPath": "businessLine",
+          "type": {
+            "type": {
+              "string": {}
+            }
+          },
+          "nativeDataType": "Business Line",
+          "nullable": false,
+          "description": "FR 2052A field: Business Line",
+          "isPartOfKey": false,
+          "recursive": false,
+          "glossaryTerms": {
+            "terms": [
+              {
+                "urn": "urn:li:glossaryTerm:MDRM.businessLine",
+                "context": null
+              }
+            ],
+            "auditStamp": {
+              "time": 0,
+              "actor": "urn:li:corpuser:datahub"
+            }
+          }
+        }
+      ]
+    }
+  },
+  {
+    "entityType": "dataset",
+    "entityUrn": "urn:li:dataset:(urn:li:dataPlatform:lcr,fr2052a.inflows.assets,PROD)",
+    "aspectName": "status",
+    "changeType": "UPSERT",
+    "aspect": {
+      "__type": "Status",
+      "removed": false
+    }
+  },
+  {
+    "entityType": "dataset",
+    "entityUrn": "urn:li:dataset:(urn:li:dataPlatform:lcr,fr2052a.inflows.assets,PROD)",
+    "aspectName": "domains",
+    "changeType": "UPSERT",
+    "aspect": {
+      "__type": "Domains",
+      "domains": [
+        "urn:li:domain:federalreserve.gov"
+      ]
+    }
+  },
+  {
+    "entityType": "dataset",
+    "entityUrn": "urn:li:dataset:(urn:li:dataPlatform:lcr,fr2052a.inflows.other,PROD)",
+    "aspectName": "datasetProperties",
+    "changeType": "UPSERT",
+    "aspect": {
+      "__type": "DatasetProperties",
+      "name": "FR 2052A \u2014 Inflows \u2014 Other",
+      "description": "Logical model for the FR 2052A Inflows \u2014 Other data table, derived from the Morphir/Elm LCR reference implementation.\n\n**Product**: CollateralCalledForReceipt, DerivativeReceivables, InterestAndDividendsReceivable, LockUpBalance, Net30DayDerivativeReceivables, OtherCashInflows, PrincipalPaymentsReceivableOnUnencumberedInvestmentSecurities, TBASales, UndrawnCommittedFacilitiesPurchased",
+      "externalUrl": "https://github.com/acryldata/open-reg-tech-us-lcr",
+      "customProperties": {
+        "section": "Inflows",
+        "table": "Other",
+        "morphir_module": "us.fr2052a.datatables.inflows.other",
+        "source": "morphir-ir.json"
+      }
+    }
+  },
+  {
+    "entityType": "dataset",
+    "entityUrn": "urn:li:dataset:(urn:li:dataPlatform:lcr,fr2052a.inflows.other,PROD)",
+    "aspectName": "subTypes",
+    "changeType": "UPSERT",
+    "aspect": {
+      "__type": "SubTypes",
+      "typeNames": [
+        "Logical Model"
+      ]
+    }
+  },
+  {
+    "entityType": "dataset",
+    "entityUrn": "urn:li:dataset:(urn:li:dataPlatform:lcr,fr2052a.inflows.other,PROD)",
+    "aspectName": "dataPlatformInstance",
+    "changeType": "UPSERT",
+    "aspect": {
+      "__type": "DataPlatformInstance",
+      "platform": "urn:li:dataPlatform:lcr"
+    }
+  },
+  {
+    "entityType": "dataset",
+    "entityUrn": "urn:li:dataset:(urn:li:dataPlatform:lcr,fr2052a.inflows.other,PROD)",
+    "aspectName": "schemaMetadata",
+    "changeType": "UPSERT",
+    "aspect": {
+      "__type": "SchemaMetadata",
+      "schemaName": "fr2052a.inflows.other",
+      "platform": "urn:li:dataPlatform:lcr",
+      "version": 0,
+      "hash": "",
+      "platformSchema": {
+        "__type": "OtherSchema",
+        "rawSchema": ""
+      },
+      "fields": [
+        {
+          "fieldPath": "currency",
+          "type": {
+            "type": {
+              "string": {}
+            }
+          },
+          "nativeDataType": "Currency",
+          "nullable": false,
+          "description": "FR 2052A field: Currency",
+          "isPartOfKey": false,
+          "recursive": false,
+          "glossaryTerms": {
+            "terms": [
+              {
+                "urn": "urn:li:glossaryTerm:MDRM.currency",
+                "context": null
+              }
+            ],
+            "auditStamp": {
+              "time": 0,
+              "actor": "urn:li:corpuser:datahub"
+            }
+          }
+        },
+        {
+          "fieldPath": "converted",
+          "type": {
+            "type": {
+              "string": {}
+            }
+          },
+          "nativeDataType": "Converted",
+          "nullable": false,
+          "description": "FR 2052A field: Converted",
+          "isPartOfKey": false,
+          "recursive": false
+        },
+        {
+          "fieldPath": "reportingEntity",
+          "type": {
+            "type": {
+              "string": {}
+            }
+          },
+          "nativeDataType": "Reporting Entity",
+          "nullable": false,
+          "description": "FR 2052A field: Reporting Entity",
+          "isPartOfKey": false,
+          "recursive": false
+        },
+        {
+          "fieldPath": "product",
+          "type": {
+            "type": {
+              "string": {}
+            }
+          },
+          "nativeDataType": "Product",
+          "nullable": false,
+          "description": "FR 2052A field: Product",
+          "isPartOfKey": false,
+          "recursive": false
+        },
+        {
+          "fieldPath": "maturityAmount",
+          "type": {
+            "type": {
+              "string": {}
+            }
+          },
+          "nativeDataType": "Maturity Amount",
+          "nullable": false,
+          "description": "FR 2052A field: Maturity Amount",
+          "isPartOfKey": false,
+          "recursive": false,
+          "glossaryTerms": {
+            "terms": [
+              {
+                "urn": "urn:li:glossaryTerm:MDRM.maturityAmount",
+                "context": null
+              }
+            ],
+            "auditStamp": {
+              "time": 0,
+              "actor": "urn:li:corpuser:datahub"
+            }
+          }
+        },
+        {
+          "fieldPath": "maturityBucket",
+          "type": {
+            "type": {
+              "string": {}
+            }
+          },
+          "nativeDataType": "Maturity Bucket",
+          "nullable": false,
+          "description": "FR 2052A field: Maturity Bucket",
+          "isPartOfKey": false,
+          "recursive": false,
+          "glossaryTerms": {
+            "terms": [
+              {
+                "urn": "urn:li:glossaryTerm:MDRM.maturityBucket",
+                "context": null
+              }
+            ],
+            "auditStamp": {
+              "time": 0,
+              "actor": "urn:li:corpuser:datahub"
+            }
+          }
+        },
+        {
+          "fieldPath": "forwardStartAmount",
+          "type": {
+            "type": {
+              "string": {}
+            }
+          },
+          "nativeDataType": "Maybe",
+          "nullable": false,
+          "description": "FR 2052A field: Forward Start Amount",
+          "isPartOfKey": false,
+          "recursive": false
+        },
+        {
+          "fieldPath": "forwardStartBucket",
+          "type": {
+            "type": {
+              "string": {}
+            }
+          },
+          "nativeDataType": "Maybe",
+          "nullable": false,
+          "description": "FR 2052A field: Forward Start Bucket",
+          "isPartOfKey": false,
+          "recursive": false
+        },
+        {
+          "fieldPath": "collateralClass",
+          "type": {
+            "type": {
+              "string": {}
+            }
+          },
+          "nativeDataType": "Maybe",
+          "nullable": false,
+          "description": "FR 2052A field: Collateral Class",
+          "isPartOfKey": false,
+          "recursive": false,
+          "glossaryTerms": {
+            "terms": [
+              {
+                "urn": "urn:li:glossaryTerm:MDRM.collateralClass",
+                "context": null
+              }
+            ],
+            "auditStamp": {
+              "time": 0,
+              "actor": "urn:li:corpuser:datahub"
+            }
+          }
+        },
+        {
+          "fieldPath": "collateralValue",
+          "type": {
+            "type": {
+              "string": {}
+            }
+          },
+          "nativeDataType": "Maybe",
+          "nullable": false,
+          "description": "FR 2052A field: Collateral Value",
+          "isPartOfKey": false,
+          "recursive": false,
+          "glossaryTerms": {
+            "terms": [
+              {
+                "urn": "urn:li:glossaryTerm:MDRM.collateralValue",
+                "context": null
+              }
+            ],
+            "auditStamp": {
+              "time": 0,
+              "actor": "urn:li:corpuser:datahub"
+            }
+          }
+        },
+        {
+          "fieldPath": "treasuryControl",
+          "type": {
+            "type": {
+              "string": {}
+            }
+          },
+          "nativeDataType": "Treasury Control",
+          "nullable": false,
+          "description": "FR 2052A field: Treasury Control",
+          "isPartOfKey": false,
+          "recursive": false
+        },
+        {
+          "fieldPath": "counterparty",
+          "type": {
+            "type": {
+              "string": {}
+            }
+          },
+          "nativeDataType": "Maybe",
+          "nullable": false,
+          "description": "FR 2052A field: Counterparty",
+          "isPartOfKey": false,
+          "recursive": false,
+          "glossaryTerms": {
+            "terms": [
+              {
+                "urn": "urn:li:glossaryTerm:MDRM.counterparty",
+                "context": null
+              }
+            ],
+            "auditStamp": {
+              "time": 0,
+              "actor": "urn:li:corpuser:datahub"
+            }
+          }
+        },
+        {
+          "fieldPath": "gSIB",
+          "type": {
+            "type": {
+              "string": {}
+            }
+          },
+          "nativeDataType": "Maybe",
+          "nullable": false,
+          "description": "FR 2052A field: G S I B",
+          "isPartOfKey": false,
+          "recursive": false
+        },
+        {
+          "fieldPath": "internal",
+          "type": {
+            "type": {
+              "string": {}
+            }
+          },
+          "nativeDataType": "Internal",
+          "nullable": false,
+          "description": "FR 2052A field: Internal",
+          "isPartOfKey": false,
+          "recursive": false
+        },
+        {
+          "fieldPath": "internalCounterparty",
+          "type": {
+            "type": {
+              "string": {}
+            }
+          },
+          "nativeDataType": "Maybe",
+          "nullable": false,
+          "description": "FR 2052A field: Internal Counterparty",
+          "isPartOfKey": false,
+          "recursive": false
+        },
+        {
+          "fieldPath": "businessLine",
+          "type": {
+            "type": {
+              "string": {}
+            }
+          },
+          "nativeDataType": "Business Line",
+          "nullable": false,
+          "description": "FR 2052A field: Business Line",
+          "isPartOfKey": false,
+          "recursive": false,
+          "glossaryTerms": {
+            "terms": [
+              {
+                "urn": "urn:li:glossaryTerm:MDRM.businessLine",
+                "context": null
+              }
+            ],
+            "auditStamp": {
+              "time": 0,
+              "actor": "urn:li:corpuser:datahub"
+            }
+          }
+        }
+      ]
+    }
+  },
+  {
+    "entityType": "dataset",
+    "entityUrn": "urn:li:dataset:(urn:li:dataPlatform:lcr,fr2052a.inflows.other,PROD)",
+    "aspectName": "status",
+    "changeType": "UPSERT",
+    "aspect": {
+      "__type": "Status",
+      "removed": false
+    }
+  },
+  {
+    "entityType": "dataset",
+    "entityUrn": "urn:li:dataset:(urn:li:dataPlatform:lcr,fr2052a.inflows.other,PROD)",
+    "aspectName": "domains",
+    "changeType": "UPSERT",
+    "aspect": {
+      "__type": "Domains",
+      "domains": [
+        "urn:li:domain:federalreserve.gov"
+      ]
+    }
+  },
+  {
+    "entityType": "dataset",
+    "entityUrn": "urn:li:dataset:(urn:li:dataPlatform:lcr,fr2052a.inflows.secured,PROD)",
+    "aspectName": "datasetProperties",
+    "changeType": "UPSERT",
+    "aspect": {
+      "__type": "DatasetProperties",
+      "name": "FR 2052A \u2014 Inflows \u2014 Secured",
+      "description": "Logical model for the FR 2052A Inflows \u2014 Secured data table, derived from the Morphir/Elm LCR reference implementation.\n\n**Product**: CollateralSwaps, DollarRolls, MarginLoans, OtherSecuredLoansNonRehypothecatable, OtherSecuredLoansRehypothecatable, OutstandingDrawsOnSecuredRevolvingFacilities, ReverseRepo, SecuritiesBorrowing, SyntheticCustomerLongs, SyntheticFirmSourcing",
+      "externalUrl": "https://github.com/acryldata/open-reg-tech-us-lcr",
+      "customProperties": {
+        "section": "Inflows",
+        "table": "Secured",
+        "morphir_module": "us.fr2052a.datatables.inflows.secured",
+        "source": "morphir-ir.json"
+      }
+    }
+  },
+  {
+    "entityType": "dataset",
+    "entityUrn": "urn:li:dataset:(urn:li:dataPlatform:lcr,fr2052a.inflows.secured,PROD)",
+    "aspectName": "subTypes",
+    "changeType": "UPSERT",
+    "aspect": {
+      "__type": "SubTypes",
+      "typeNames": [
+        "Logical Model"
+      ]
+    }
+  },
+  {
+    "entityType": "dataset",
+    "entityUrn": "urn:li:dataset:(urn:li:dataPlatform:lcr,fr2052a.inflows.secured,PROD)",
+    "aspectName": "dataPlatformInstance",
+    "changeType": "UPSERT",
+    "aspect": {
+      "__type": "DataPlatformInstance",
+      "platform": "urn:li:dataPlatform:lcr"
+    }
+  },
+  {
+    "entityType": "dataset",
+    "entityUrn": "urn:li:dataset:(urn:li:dataPlatform:lcr,fr2052a.inflows.secured,PROD)",
+    "aspectName": "schemaMetadata",
+    "changeType": "UPSERT",
+    "aspect": {
+      "__type": "SchemaMetadata",
+      "schemaName": "fr2052a.inflows.secured",
+      "platform": "urn:li:dataPlatform:lcr",
+      "version": 0,
+      "hash": "",
+      "platformSchema": {
+        "__type": "OtherSchema",
+        "rawSchema": ""
+      },
+      "fields": [
+        {
+          "fieldPath": "currency",
+          "type": {
+            "type": {
+              "string": {}
+            }
+          },
+          "nativeDataType": "Currency",
+          "nullable": false,
+          "description": "FR 2052A field: Currency",
+          "isPartOfKey": false,
+          "recursive": false,
+          "glossaryTerms": {
+            "terms": [
+              {
+                "urn": "urn:li:glossaryTerm:MDRM.currency",
+                "context": null
+              }
+            ],
+            "auditStamp": {
+              "time": 0,
+              "actor": "urn:li:corpuser:datahub"
+            }
+          }
+        },
+        {
+          "fieldPath": "converted",
+          "type": {
+            "type": {
+              "string": {}
+            }
+          },
+          "nativeDataType": "Converted",
+          "nullable": false,
+          "description": "FR 2052A field: Converted",
+          "isPartOfKey": false,
+          "recursive": false
+        },
+        {
+          "fieldPath": "reportingEntity",
+          "type": {
+            "type": {
+              "string": {}
+            }
+          },
+          "nativeDataType": "Reporting Entity",
+          "nullable": false,
+          "description": "FR 2052A field: Reporting Entity",
+          "isPartOfKey": false,
+          "recursive": false
+        },
+        {
+          "fieldPath": "product",
+          "type": {
+            "type": {
+              "string": {}
+            }
+          },
+          "nativeDataType": "Product",
+          "nullable": false,
+          "description": "FR 2052A field: Product",
+          "isPartOfKey": false,
+          "recursive": false
+        },
+        {
+          "fieldPath": "subProduct",
+          "type": {
+            "type": {
+              "string": {}
+            }
+          },
+          "nativeDataType": "Maybe",
+          "nullable": false,
+          "description": "FR 2052A field: Sub Product",
+          "isPartOfKey": false,
+          "recursive": false
+        },
+        {
+          "fieldPath": "maturityAmount",
+          "type": {
+            "type": {
+              "string": {}
+            }
+          },
+          "nativeDataType": "Maturity Amount",
+          "nullable": false,
+          "description": "FR 2052A field: Maturity Amount",
+          "isPartOfKey": false,
+          "recursive": false,
+          "glossaryTerms": {
+            "terms": [
+              {
+                "urn": "urn:li:glossaryTerm:MDRM.maturityAmount",
+                "context": null
+              }
+            ],
+            "auditStamp": {
+              "time": 0,
+              "actor": "urn:li:corpuser:datahub"
+            }
+          }
+        },
+        {
+          "fieldPath": "maturityBucket",
+          "type": {
+            "type": {
+              "string": {}
+            }
+          },
+          "nativeDataType": "Maturity Bucket",
+          "nullable": false,
+          "description": "FR 2052A field: Maturity Bucket",
+          "isPartOfKey": false,
+          "recursive": false,
+          "glossaryTerms": {
+            "terms": [
+              {
+                "urn": "urn:li:glossaryTerm:MDRM.maturityBucket",
+                "context": null
+              }
+            ],
+            "auditStamp": {
+              "time": 0,
+              "actor": "urn:li:corpuser:datahub"
+            }
+          }
+        },
+        {
+          "fieldPath": "maturityOptionality",
+          "type": {
+            "type": {
+              "string": {}
+            }
+          },
+          "nativeDataType": "Maybe",
+          "nullable": false,
+          "description": "FR 2052A field: Maturity Optionality",
+          "isPartOfKey": false,
+          "recursive": false
+        },
+        {
+          "fieldPath": "effectiveMaturityBucket",
+          "type": {
+            "type": {
+              "string": {}
+            }
+          },
+          "nativeDataType": "Maybe",
+          "nullable": false,
+          "description": "FR 2052A field: Effective Maturity Bucket",
+          "isPartOfKey": false,
+          "recursive": false
+        },
+        {
+          "fieldPath": "encumbranceType",
+          "type": {
+            "type": {
+              "string": {}
+            }
+          },
+          "nativeDataType": "Maybe",
+          "nullable": false,
+          "description": "FR 2052A field: Encumbrance Type",
+          "isPartOfKey": false,
+          "recursive": false
+        },
+        {
+          "fieldPath": "forwardStartAmount",
+          "type": {
+            "type": {
+              "string": {}
+            }
+          },
+          "nativeDataType": "Maybe",
+          "nullable": false,
+          "description": "FR 2052A field: Forward Start Amount",
+          "isPartOfKey": false,
+          "recursive": false
+        },
+        {
+          "fieldPath": "forwardStartBucket",
+          "type": {
+            "type": {
+              "string": {}
+            }
+          },
+          "nativeDataType": "Maybe",
+          "nullable": false,
+          "description": "FR 2052A field: Forward Start Bucket",
+          "isPartOfKey": false,
+          "recursive": false
+        },
+        {
+          "fieldPath": "collateralClass",
+          "type": {
+            "type": {
+              "string": {}
+            }
+          },
+          "nativeDataType": "Collateral Class",
+          "nullable": false,
+          "description": "FR 2052A field: Collateral Class",
+          "isPartOfKey": false,
+          "recursive": false,
+          "glossaryTerms": {
+            "terms": [
+              {
+                "urn": "urn:li:glossaryTerm:MDRM.collateralClass",
+                "context": null
+              }
+            ],
+            "auditStamp": {
+              "time": 0,
+              "actor": "urn:li:corpuser:datahub"
+            }
+          }
+        },
+        {
+          "fieldPath": "collateralValue",
+          "type": {
+            "type": {
+              "string": {}
+            }
+          },
+          "nativeDataType": "Collateral Value",
+          "nullable": false,
+          "description": "FR 2052A field: Collateral Value",
+          "isPartOfKey": false,
+          "recursive": false,
+          "glossaryTerms": {
+            "terms": [
+              {
+                "urn": "urn:li:glossaryTerm:MDRM.collateralValue",
+                "context": null
+              }
+            ],
+            "auditStamp": {
+              "time": 0,
+              "actor": "urn:li:corpuser:datahub"
+            }
+          }
+        },
+        {
+          "fieldPath": "unencumbered",
+          "type": {
+            "type": {
+              "string": {}
+            }
+          },
+          "nativeDataType": "Unencumbered",
+          "nullable": false,
+          "description": "FR 2052A field: Unencumbered",
+          "isPartOfKey": false,
+          "recursive": false
+        },
+        {
+          "fieldPath": "treasuryControl",
+          "type": {
+            "type": {
+              "string": {}
+            }
+          },
+          "nativeDataType": "Treasury Control",
+          "nullable": false,
+          "description": "FR 2052A field: Treasury Control",
+          "isPartOfKey": false,
+          "recursive": false
+        },
+        {
+          "fieldPath": "internal",
+          "type": {
+            "type": {
+              "string": {}
+            }
+          },
+          "nativeDataType": "Internal",
+          "nullable": false,
+          "description": "FR 2052A field: Internal",
+          "isPartOfKey": false,
+          "recursive": false
+        },
+        {
+          "fieldPath": "internalCounterparty",
+          "type": {
+            "type": {
+              "string": {}
+            }
+          },
+          "nativeDataType": "Maybe",
+          "nullable": false,
+          "description": "FR 2052A field: Internal Counterparty",
+          "isPartOfKey": false,
+          "recursive": false
+        },
+        {
+          "fieldPath": "riskWeight",
+          "type": {
+            "type": {
+              "string": {}
+            }
+          },
+          "nativeDataType": "Maybe",
+          "nullable": false,
+          "description": "FR 2052A field: Risk Weight",
+          "isPartOfKey": false,
+          "recursive": false,
+          "glossaryTerms": {
+            "terms": [
+              {
+                "urn": "urn:li:glossaryTerm:MDRM.riskWeight",
+                "context": null
+              }
+            ],
+            "auditStamp": {
+              "time": 0,
+              "actor": "urn:li:corpuser:datahub"
+            }
+          }
+        },
+        {
+          "fieldPath": "businessLine",
+          "type": {
+            "type": {
+              "string": {}
+            }
+          },
+          "nativeDataType": "Business Line",
+          "nullable": false,
+          "description": "FR 2052A field: Business Line",
+          "isPartOfKey": false,
+          "recursive": false,
+          "glossaryTerms": {
+            "terms": [
+              {
+                "urn": "urn:li:glossaryTerm:MDRM.businessLine",
+                "context": null
+              }
+            ],
+            "auditStamp": {
+              "time": 0,
+              "actor": "urn:li:corpuser:datahub"
+            }
+          }
+        },
+        {
+          "fieldPath": "settlement",
+          "type": {
+            "type": {
+              "string": {}
+            }
+          },
+          "nativeDataType": "Settlement",
+          "nullable": false,
+          "description": "FR 2052A field: Settlement",
+          "isPartOfKey": false,
+          "recursive": false
+        },
+        {
+          "fieldPath": "counterparty",
+          "type": {
+            "type": {
+              "string": {}
+            }
+          },
+          "nativeDataType": "Counterparty",
+          "nullable": false,
+          "description": "FR 2052A field: Counterparty",
+          "isPartOfKey": false,
+          "recursive": false,
+          "glossaryTerms": {
+            "terms": [
+              {
+                "urn": "urn:li:glossaryTerm:MDRM.counterparty",
+                "context": null
+              }
+            ],
+            "auditStamp": {
+              "time": 0,
+              "actor": "urn:li:corpuser:datahub"
+            }
+          }
+        },
+        {
+          "fieldPath": "gSIB",
+          "type": {
+            "type": {
+              "string": {}
+            }
+          },
+          "nativeDataType": "Maybe",
+          "nullable": false,
+          "description": "FR 2052A field: G S I B",
+          "isPartOfKey": false,
+          "recursive": false
+        }
+      ]
+    }
+  },
+  {
+    "entityType": "dataset",
+    "entityUrn": "urn:li:dataset:(urn:li:dataPlatform:lcr,fr2052a.inflows.secured,PROD)",
+    "aspectName": "status",
+    "changeType": "UPSERT",
+    "aspect": {
+      "__type": "Status",
+      "removed": false
+    }
+  },
+  {
+    "entityType": "dataset",
+    "entityUrn": "urn:li:dataset:(urn:li:dataPlatform:lcr,fr2052a.inflows.secured,PROD)",
+    "aspectName": "domains",
+    "changeType": "UPSERT",
+    "aspect": {
+      "__type": "Domains",
+      "domains": [
+        "urn:li:domain:federalreserve.gov"
+      ]
+    }
+  },
+  {
+    "entityType": "dataset",
+    "entityUrn": "urn:li:dataset:(urn:li:dataPlatform:lcr,fr2052a.inflows.unsecured,PROD)",
+    "aspectName": "datasetProperties",
+    "changeType": "UPSERT",
+    "aspect": {
+      "__type": "DatasetProperties",
+      "name": "FR 2052A \u2014 Inflows \u2014 Unsecured",
+      "description": "Logical model for the FR 2052A Inflows \u2014 Unsecured data table, derived from the Morphir/Elm LCR reference implementation.\n\n**Product**: CashItemsInTheProcessOfCollection, ExcessOperationalBalances, OffshorePlacements, OnshorePlacements, OtherLoans, OutstandingDrawsOnUnsecuredRevolvingFacilities, RequiredOperationalBalances, ShortTermInvestments",
+      "externalUrl": "https://github.com/acryldata/open-reg-tech-us-lcr",
+      "customProperties": {
+        "section": "Inflows",
+        "table": "Unsecured",
+        "morphir_module": "us.fr2052a.datatables.inflows.unsecured",
+        "source": "morphir-ir.json"
+      }
+    }
+  },
+  {
+    "entityType": "dataset",
+    "entityUrn": "urn:li:dataset:(urn:li:dataPlatform:lcr,fr2052a.inflows.unsecured,PROD)",
+    "aspectName": "subTypes",
+    "changeType": "UPSERT",
+    "aspect": {
+      "__type": "SubTypes",
+      "typeNames": [
+        "Logical Model"
+      ]
+    }
+  },
+  {
+    "entityType": "dataset",
+    "entityUrn": "urn:li:dataset:(urn:li:dataPlatform:lcr,fr2052a.inflows.unsecured,PROD)",
+    "aspectName": "dataPlatformInstance",
+    "changeType": "UPSERT",
+    "aspect": {
+      "__type": "DataPlatformInstance",
+      "platform": "urn:li:dataPlatform:lcr"
+    }
+  },
+  {
+    "entityType": "dataset",
+    "entityUrn": "urn:li:dataset:(urn:li:dataPlatform:lcr,fr2052a.inflows.unsecured,PROD)",
+    "aspectName": "schemaMetadata",
+    "changeType": "UPSERT",
+    "aspect": {
+      "__type": "SchemaMetadata",
+      "schemaName": "fr2052a.inflows.unsecured",
+      "platform": "urn:li:dataPlatform:lcr",
+      "version": 0,
+      "hash": "",
+      "platformSchema": {
+        "__type": "OtherSchema",
+        "rawSchema": ""
+      },
+      "fields": [
+        {
+          "fieldPath": "currency",
+          "type": {
+            "type": {
+              "string": {}
+            }
+          },
+          "nativeDataType": "Currency",
+          "nullable": false,
+          "description": "FR 2052A field: Currency",
+          "isPartOfKey": false,
+          "recursive": false,
+          "glossaryTerms": {
+            "terms": [
+              {
+                "urn": "urn:li:glossaryTerm:MDRM.currency",
+                "context": null
+              }
+            ],
+            "auditStamp": {
+              "time": 0,
+              "actor": "urn:li:corpuser:datahub"
+            }
+          }
+        },
+        {
+          "fieldPath": "converted",
+          "type": {
+            "type": {
+              "string": {}
+            }
+          },
+          "nativeDataType": "Converted",
+          "nullable": false,
+          "description": "FR 2052A field: Converted",
+          "isPartOfKey": false,
+          "recursive": false
+        },
+        {
+          "fieldPath": "reportingEntity",
+          "type": {
+            "type": {
+              "string": {}
+            }
+          },
+          "nativeDataType": "Reporting Entity",
+          "nullable": false,
+          "description": "FR 2052A field: Reporting Entity",
+          "isPartOfKey": false,
+          "recursive": false
+        },
+        {
+          "fieldPath": "product",
+          "type": {
+            "type": {
+              "string": {}
+            }
+          },
+          "nativeDataType": "Product",
+          "nullable": false,
+          "description": "FR 2052A field: Product",
+          "isPartOfKey": false,
+          "recursive": false
+        },
+        {
+          "fieldPath": "counterparty",
+          "type": {
+            "type": {
+              "string": {}
+            }
+          },
+          "nativeDataType": "Maybe",
+          "nullable": false,
+          "description": "FR 2052A field: Counterparty",
+          "isPartOfKey": false,
+          "recursive": false,
+          "glossaryTerms": {
+            "terms": [
+              {
+                "urn": "urn:li:glossaryTerm:MDRM.counterparty",
+                "context": null
+              }
+            ],
+            "auditStamp": {
+              "time": 0,
+              "actor": "urn:li:corpuser:datahub"
+            }
+          }
+        },
+        {
+          "fieldPath": "gSIB",
+          "type": {
+            "type": {
+              "string": {}
+            }
+          },
+          "nativeDataType": "Maybe",
+          "nullable": false,
+          "description": "FR 2052A field: G S I B",
+          "isPartOfKey": false,
+          "recursive": false
+        },
+        {
+          "fieldPath": "maturityAmount",
+          "type": {
+            "type": {
+              "string": {}
+            }
+          },
+          "nativeDataType": "Maturity Amount",
+          "nullable": false,
+          "description": "FR 2052A field: Maturity Amount",
+          "isPartOfKey": false,
+          "recursive": false,
+          "glossaryTerms": {
+            "terms": [
+              {
+                "urn": "urn:li:glossaryTerm:MDRM.maturityAmount",
+                "context": null
+              }
+            ],
+            "auditStamp": {
+              "time": 0,
+              "actor": "urn:li:corpuser:datahub"
+            }
+          }
+        },
+        {
+          "fieldPath": "maturityBucket",
+          "type": {
+            "type": {
+              "string": {}
+            }
+          },
+          "nativeDataType": "Maturity Bucket",
+          "nullable": false,
+          "description": "FR 2052A field: Maturity Bucket",
+          "isPartOfKey": false,
+          "recursive": false,
+          "glossaryTerms": {
+            "terms": [
+              {
+                "urn": "urn:li:glossaryTerm:MDRM.maturityBucket",
+                "context": null
+              }
+            ],
+            "auditStamp": {
+              "time": 0,
+              "actor": "urn:li:corpuser:datahub"
+            }
+          }
+        },
+        {
+          "fieldPath": "maturityOptionality",
+          "type": {
+            "type": {
+              "string": {}
+            }
+          },
+          "nativeDataType": "Maybe",
+          "nullable": false,
+          "description": "FR 2052A field: Maturity Optionality",
+          "isPartOfKey": false,
+          "recursive": false
+        },
+        {
+          "fieldPath": "effectiveMaturityBucket",
+          "type": {
+            "type": {
+              "string": {}
+            }
+          },
+          "nativeDataType": "Maybe",
+          "nullable": false,
+          "description": "FR 2052A field: Effective Maturity Bucket",
+          "isPartOfKey": false,
+          "recursive": false
+        },
+        {
+          "fieldPath": "encumbranceType",
+          "type": {
+            "type": {
+              "string": {}
+            }
+          },
+          "nativeDataType": "Maybe",
+          "nullable": false,
+          "description": "FR 2052A field: Encumbrance Type",
+          "isPartOfKey": false,
+          "recursive": false
+        },
+        {
+          "fieldPath": "forwardStartAmount",
+          "type": {
+            "type": {
+              "string": {}
+            }
+          },
+          "nativeDataType": "Maybe",
+          "nullable": false,
+          "description": "FR 2052A field: Forward Start Amount",
+          "isPartOfKey": false,
+          "recursive": false
+        },
+        {
+          "fieldPath": "forwardStartBucket",
+          "type": {
+            "type": {
+              "string": {}
+            }
+          },
+          "nativeDataType": "Maybe",
+          "nullable": false,
+          "description": "FR 2052A field: Forward Start Bucket",
+          "isPartOfKey": false,
+          "recursive": false
+        },
+        {
+          "fieldPath": "internal",
+          "type": {
+            "type": {
+              "string": {}
+            }
+          },
+          "nativeDataType": "Internal",
+          "nullable": false,
+          "description": "FR 2052A field: Internal",
+          "isPartOfKey": false,
+          "recursive": false
+        },
+        {
+          "fieldPath": "internalCounterparty",
+          "type": {
+            "type": {
+              "string": {}
+            }
+          },
+          "nativeDataType": "Maybe",
+          "nullable": false,
+          "description": "FR 2052A field: Internal Counterparty",
+          "isPartOfKey": false,
+          "recursive": false
+        },
+        {
+          "fieldPath": "riskWeight",
+          "type": {
+            "type": {
+              "string": {}
+            }
+          },
+          "nativeDataType": "Maybe",
+          "nullable": false,
+          "description": "FR 2052A field: Risk Weight",
+          "isPartOfKey": false,
+          "recursive": false,
+          "glossaryTerms": {
+            "terms": [
+              {
+                "urn": "urn:li:glossaryTerm:MDRM.riskWeight",
+                "context": null
+              }
+            ],
+            "auditStamp": {
+              "time": 0,
+              "actor": "urn:li:corpuser:datahub"
+            }
+          }
+        },
+        {
+          "fieldPath": "businessLine",
+          "type": {
+            "type": {
+              "string": {}
+            }
+          },
+          "nativeDataType": "Business Line",
+          "nullable": false,
+          "description": "FR 2052A field: Business Line",
+          "isPartOfKey": false,
+          "recursive": false,
+          "glossaryTerms": {
+            "terms": [
+              {
+                "urn": "urn:li:glossaryTerm:MDRM.businessLine",
+                "context": null
+              }
+            ],
+            "auditStamp": {
+              "time": 0,
+              "actor": "urn:li:corpuser:datahub"
+            }
+          }
+        }
+      ]
+    }
+  },
+  {
+    "entityType": "dataset",
+    "entityUrn": "urn:li:dataset:(urn:li:dataPlatform:lcr,fr2052a.inflows.unsecured,PROD)",
+    "aspectName": "status",
+    "changeType": "UPSERT",
+    "aspect": {
+      "__type": "Status",
+      "removed": false
+    }
+  },
+  {
+    "entityType": "dataset",
+    "entityUrn": "urn:li:dataset:(urn:li:dataPlatform:lcr,fr2052a.inflows.unsecured,PROD)",
+    "aspectName": "domains",
+    "changeType": "UPSERT",
+    "aspect": {
+      "__type": "Domains",
+      "domains": [
+        "urn:li:domain:federalreserve.gov"
+      ]
+    }
+  },
+  {
+    "entityType": "dataset",
+    "entityUrn": "urn:li:dataset:(urn:li:dataPlatform:lcr,fr2052a.outflows.deposits,PROD)",
+    "aspectName": "datasetProperties",
+    "changeType": "UPSERT",
+    "aspect": {
+      "__type": "DatasetProperties",
+      "name": "FR 2052A \u2014 Outflows \u2014 Deposits",
+      "description": "Logical model for the FR 2052A Outflows \u2014 Deposits data table, derived from the Morphir/Elm LCR reference implementation.\n\n**Product**: ExcessBalancesInOperationalAccounts, LessStableAffiliatedSweepAccountBalances, NonAffiliatedSweepAccounts, NonOperationalAccountBalances, NonReciprocalBrokeredAccounts, NonTransactionalNonRelationshipAccounts, NonTransactionalRelationshipAccounts, OperationalAccountBalances, OperationalEscrowAccounts, OtherAccounts (+5 more)",
+      "externalUrl": "https://github.com/acryldata/open-reg-tech-us-lcr",
+      "customProperties": {
+        "section": "Outflows",
+        "table": "Deposits",
+        "morphir_module": "us.fr2052a.datatables.outflows.deposits",
+        "source": "morphir-ir.json"
+      }
+    }
+  },
+  {
+    "entityType": "dataset",
+    "entityUrn": "urn:li:dataset:(urn:li:dataPlatform:lcr,fr2052a.outflows.deposits,PROD)",
+    "aspectName": "subTypes",
+    "changeType": "UPSERT",
+    "aspect": {
+      "__type": "SubTypes",
+      "typeNames": [
+        "Logical Model"
+      ]
+    }
+  },
+  {
+    "entityType": "dataset",
+    "entityUrn": "urn:li:dataset:(urn:li:dataPlatform:lcr,fr2052a.outflows.deposits,PROD)",
+    "aspectName": "dataPlatformInstance",
+    "changeType": "UPSERT",
+    "aspect": {
+      "__type": "DataPlatformInstance",
+      "platform": "urn:li:dataPlatform:lcr"
+    }
+  },
+  {
+    "entityType": "dataset",
+    "entityUrn": "urn:li:dataset:(urn:li:dataPlatform:lcr,fr2052a.outflows.deposits,PROD)",
+    "aspectName": "schemaMetadata",
+    "changeType": "UPSERT",
+    "aspect": {
+      "__type": "SchemaMetadata",
+      "schemaName": "fr2052a.outflows.deposits",
+      "platform": "urn:li:dataPlatform:lcr",
+      "version": 0,
+      "hash": "",
+      "platformSchema": {
+        "__type": "OtherSchema",
+        "rawSchema": ""
+      },
+      "fields": [
+        {
+          "fieldPath": "currency",
+          "type": {
+            "type": {
+              "string": {}
+            }
+          },
+          "nativeDataType": "Currency",
+          "nullable": false,
+          "description": "FR 2052A field: Currency",
+          "isPartOfKey": false,
+          "recursive": false,
+          "glossaryTerms": {
+            "terms": [
+              {
+                "urn": "urn:li:glossaryTerm:MDRM.currency",
+                "context": null
+              }
+            ],
+            "auditStamp": {
+              "time": 0,
+              "actor": "urn:li:corpuser:datahub"
+            }
+          }
+        },
+        {
+          "fieldPath": "converted",
+          "type": {
+            "type": {
+              "string": {}
+            }
+          },
+          "nativeDataType": "Converted",
+          "nullable": false,
+          "description": "FR 2052A field: Converted",
+          "isPartOfKey": false,
+          "recursive": false
+        },
+        {
+          "fieldPath": "reportingEntity",
+          "type": {
+            "type": {
+              "string": {}
+            }
+          },
+          "nativeDataType": "Reporting Entity",
+          "nullable": false,
+          "description": "FR 2052A field: Reporting Entity",
+          "isPartOfKey": false,
+          "recursive": false
+        },
+        {
+          "fieldPath": "product",
+          "type": {
+            "type": {
+              "string": {}
+            }
+          },
+          "nativeDataType": "Product",
+          "nullable": false,
+          "description": "FR 2052A field: Product",
+          "isPartOfKey": false,
+          "recursive": false
+        },
+        {
+          "fieldPath": "counterparty",
+          "type": {
+            "type": {
+              "string": {}
+            }
+          },
+          "nativeDataType": "Counterparty",
+          "nullable": false,
+          "description": "FR 2052A field: Counterparty",
+          "isPartOfKey": false,
+          "recursive": false,
+          "glossaryTerms": {
+            "terms": [
+              {
+                "urn": "urn:li:glossaryTerm:MDRM.counterparty",
+                "context": null
+              }
+            ],
+            "auditStamp": {
+              "time": 0,
+              "actor": "urn:li:corpuser:datahub"
+            }
+          }
+        },
+        {
+          "fieldPath": "gSIB",
+          "type": {
+            "type": {
+              "string": {}
+            }
+          },
+          "nativeDataType": "Maybe",
+          "nullable": false,
+          "description": "FR 2052A field: G S I B",
+          "isPartOfKey": false,
+          "recursive": false
+        },
+        {
+          "fieldPath": "maturityAmount",
+          "type": {
+            "type": {
+              "string": {}
+            }
+          },
+          "nativeDataType": "Maturity Amount",
+          "nullable": false,
+          "description": "FR 2052A field: Maturity Amount",
+          "isPartOfKey": false,
+          "recursive": false,
+          "glossaryTerms": {
+            "terms": [
+              {
+                "urn": "urn:li:glossaryTerm:MDRM.maturityAmount",
+                "context": null
+              }
+            ],
+            "auditStamp": {
+              "time": 0,
+              "actor": "urn:li:corpuser:datahub"
+            }
+          }
+        },
+        {
+          "fieldPath": "maturityBucket",
+          "type": {
+            "type": {
+              "string": {}
+            }
+          },
+          "nativeDataType": "Maturity Bucket",
+          "nullable": false,
+          "description": "FR 2052A field: Maturity Bucket",
+          "isPartOfKey": false,
+          "recursive": false,
+          "glossaryTerms": {
+            "terms": [
+              {
+                "urn": "urn:li:glossaryTerm:MDRM.maturityBucket",
+                "context": null
+              }
+            ],
+            "auditStamp": {
+              "time": 0,
+              "actor": "urn:li:corpuser:datahub"
+            }
+          }
+        },
+        {
+          "fieldPath": "maturityOptionality",
+          "type": {
+            "type": {
+              "string": {}
+            }
+          },
+          "nativeDataType": "Maybe",
+          "nullable": false,
+          "description": "FR 2052A field: Maturity Optionality",
+          "isPartOfKey": false,
+          "recursive": false
+        },
+        {
+          "fieldPath": "collateralClass",
+          "type": {
+            "type": {
+              "string": {}
+            }
+          },
+          "nativeDataType": "Maybe",
+          "nullable": false,
+          "description": "FR 2052A field: Collateral Class",
+          "isPartOfKey": false,
+          "recursive": false,
+          "glossaryTerms": {
+            "terms": [
+              {
+                "urn": "urn:li:glossaryTerm:MDRM.collateralClass",
+                "context": null
+              }
+            ],
+            "auditStamp": {
+              "time": 0,
+              "actor": "urn:li:corpuser:datahub"
+            }
+          }
+        },
+        {
+          "fieldPath": "collateralValue",
+          "type": {
+            "type": {
+              "string": {}
+            }
+          },
+          "nativeDataType": "Maybe",
+          "nullable": false,
+          "description": "FR 2052A field: Collateral Value",
+          "isPartOfKey": false,
+          "recursive": false,
+          "glossaryTerms": {
+            "terms": [
+              {
+                "urn": "urn:li:glossaryTerm:MDRM.collateralValue",
+                "context": null
+              }
+            ],
+            "auditStamp": {
+              "time": 0,
+              "actor": "urn:li:corpuser:datahub"
+            }
+          }
+        },
+        {
+          "fieldPath": "insured",
+          "type": {
+            "type": {
+              "string": {}
+            }
+          },
+          "nativeDataType": "Insured",
+          "nullable": false,
+          "description": "FR 2052A field: Insured",
+          "isPartOfKey": false,
+          "recursive": false
+        },
+        {
+          "fieldPath": "trigger",
+          "type": {
+            "type": {
+              "string": {}
+            }
+          },
+          "nativeDataType": "Trigger",
+          "nullable": false,
+          "description": "FR 2052A field: Trigger",
+          "isPartOfKey": false,
+          "recursive": false
+        },
+        {
+          "fieldPath": "rehypothecated",
+          "type": {
+            "type": {
+              "string": {}
+            }
+          },
+          "nativeDataType": "Maybe",
+          "nullable": false,
+          "description": "FR 2052A field: Rehypothecated",
+          "isPartOfKey": false,
+          "recursive": false
+        },
+        {
+          "fieldPath": "businessLine",
+          "type": {
+            "type": {
+              "string": {}
+            }
+          },
+          "nativeDataType": "Business Line",
+          "nullable": false,
+          "description": "FR 2052A field: Business Line",
+          "isPartOfKey": false,
+          "recursive": false,
+          "glossaryTerms": {
+            "terms": [
+              {
+                "urn": "urn:li:glossaryTerm:MDRM.businessLine",
+                "context": null
+              }
+            ],
+            "auditStamp": {
+              "time": 0,
+              "actor": "urn:li:corpuser:datahub"
+            }
+          }
+        },
+        {
+          "fieldPath": "internal",
+          "type": {
+            "type": {
+              "string": {}
+            }
+          },
+          "nativeDataType": "Internal",
+          "nullable": false,
+          "description": "FR 2052A field: Internal",
+          "isPartOfKey": false,
+          "recursive": false
+        },
+        {
+          "fieldPath": "internalCounterparty",
+          "type": {
+            "type": {
+              "string": {}
+            }
+          },
+          "nativeDataType": "Maybe",
+          "nullable": false,
+          "description": "FR 2052A field: Internal Counterparty",
+          "isPartOfKey": false,
+          "recursive": false
+        }
+      ]
+    }
+  },
+  {
+    "entityType": "dataset",
+    "entityUrn": "urn:li:dataset:(urn:li:dataPlatform:lcr,fr2052a.outflows.deposits,PROD)",
+    "aspectName": "status",
+    "changeType": "UPSERT",
+    "aspect": {
+      "__type": "Status",
+      "removed": false
+    }
+  },
+  {
+    "entityType": "dataset",
+    "entityUrn": "urn:li:dataset:(urn:li:dataPlatform:lcr,fr2052a.outflows.deposits,PROD)",
+    "aspectName": "domains",
+    "changeType": "UPSERT",
+    "aspect": {
+      "__type": "Domains",
+      "domains": [
+        "urn:li:domain:federalreserve.gov"
+      ]
+    }
+  },
+  {
+    "entityType": "dataset",
+    "entityUrn": "urn:li:dataset:(urn:li:dataPlatform:lcr,fr2052a.outflows.other,PROD)",
+    "aspectName": "datasetProperties",
+    "changeType": "UPSERT",
+    "aspect": {
+      "__type": "DatasetProperties",
+      "name": "FR 2052A \u2014 Outflows \u2014 Other",
+      "description": "Logical model for the FR 2052A Outflows \u2014 Other data table, derived from the Morphir/Elm LCR reference implementation.\n\n**Product**: CollateralCalledForDelivery, CreditFacilities, DerivativePayables, ExcessMargin, InterestDividendsPayable, LiquidityFacilities, LossOfRehypothecationRightsDueToA1NotchDowngrade, LossOfRehypothecationRightsDueToA2NotchDowngrade, LossOfRehypothecationRightsDueToA3NotchDowngrade, LossOfRehypothecationRightsDueToAChangeInFinancialCondition (+12 more)",
+      "externalUrl": "https://github.com/acryldata/open-reg-tech-us-lcr",
+      "customProperties": {
+        "section": "Outflows",
+        "table": "Other",
+        "morphir_module": "us.fr2052a.datatables.outflows.other",
+        "source": "morphir-ir.json"
+      }
+    }
+  },
+  {
+    "entityType": "dataset",
+    "entityUrn": "urn:li:dataset:(urn:li:dataPlatform:lcr,fr2052a.outflows.other,PROD)",
+    "aspectName": "subTypes",
+    "changeType": "UPSERT",
+    "aspect": {
+      "__type": "SubTypes",
+      "typeNames": [
+        "Logical Model"
+      ]
+    }
+  },
+  {
+    "entityType": "dataset",
+    "entityUrn": "urn:li:dataset:(urn:li:dataPlatform:lcr,fr2052a.outflows.other,PROD)",
+    "aspectName": "dataPlatformInstance",
+    "changeType": "UPSERT",
+    "aspect": {
+      "__type": "DataPlatformInstance",
+      "platform": "urn:li:dataPlatform:lcr"
+    }
+  },
+  {
+    "entityType": "dataset",
+    "entityUrn": "urn:li:dataset:(urn:li:dataPlatform:lcr,fr2052a.outflows.other,PROD)",
+    "aspectName": "schemaMetadata",
+    "changeType": "UPSERT",
+    "aspect": {
+      "__type": "SchemaMetadata",
+      "schemaName": "fr2052a.outflows.other",
+      "platform": "urn:li:dataPlatform:lcr",
+      "version": 0,
+      "hash": "",
+      "platformSchema": {
+        "__type": "OtherSchema",
+        "rawSchema": ""
+      },
+      "fields": [
+        {
+          "fieldPath": "currency",
+          "type": {
+            "type": {
+              "string": {}
+            }
+          },
+          "nativeDataType": "Currency",
+          "nullable": false,
+          "description": "FR 2052A field: Currency",
+          "isPartOfKey": false,
+          "recursive": false,
+          "glossaryTerms": {
+            "terms": [
+              {
+                "urn": "urn:li:glossaryTerm:MDRM.currency",
+                "context": null
+              }
+            ],
+            "auditStamp": {
+              "time": 0,
+              "actor": "urn:li:corpuser:datahub"
+            }
+          }
+        },
+        {
+          "fieldPath": "converted",
+          "type": {
+            "type": {
+              "string": {}
+            }
+          },
+          "nativeDataType": "Converted",
+          "nullable": false,
+          "description": "FR 2052A field: Converted",
+          "isPartOfKey": false,
+          "recursive": false
+        },
+        {
+          "fieldPath": "reportingEntity",
+          "type": {
+            "type": {
+              "string": {}
+            }
+          },
+          "nativeDataType": "Reporting Entity",
+          "nullable": false,
+          "description": "FR 2052A field: Reporting Entity",
+          "isPartOfKey": false,
+          "recursive": false
+        },
+        {
+          "fieldPath": "product",
+          "type": {
+            "type": {
+              "string": {}
+            }
+          },
+          "nativeDataType": "Product",
+          "nullable": false,
+          "description": "FR 2052A field: Product",
+          "isPartOfKey": false,
+          "recursive": false
+        },
+        {
+          "fieldPath": "counterparty",
+          "type": {
+            "type": {
+              "string": {}
+            }
+          },
+          "nativeDataType": "Maybe",
+          "nullable": false,
+          "description": "FR 2052A field: Counterparty",
+          "isPartOfKey": false,
+          "recursive": false,
+          "glossaryTerms": {
+            "terms": [
+              {
+                "urn": "urn:li:glossaryTerm:MDRM.counterparty",
+                "context": null
+              }
+            ],
+            "auditStamp": {
+              "time": 0,
+              "actor": "urn:li:corpuser:datahub"
+            }
+          }
+        },
+        {
+          "fieldPath": "gSIB",
+          "type": {
+            "type": {
+              "string": {}
+            }
+          },
+          "nativeDataType": "Maybe",
+          "nullable": false,
+          "description": "FR 2052A field: G S I B",
+          "isPartOfKey": false,
+          "recursive": false
+        },
+        {
+          "fieldPath": "maturityAmount",
+          "type": {
+            "type": {
+              "string": {}
+            }
+          },
+          "nativeDataType": "Maturity Amount",
+          "nullable": false,
+          "description": "FR 2052A field: Maturity Amount",
+          "isPartOfKey": false,
+          "recursive": false,
+          "glossaryTerms": {
+            "terms": [
+              {
+                "urn": "urn:li:glossaryTerm:MDRM.maturityAmount",
+                "context": null
+              }
+            ],
+            "auditStamp": {
+              "time": 0,
+              "actor": "urn:li:corpuser:datahub"
+            }
+          }
+        },
+        {
+          "fieldPath": "maturityBucket",
+          "type": {
+            "type": {
+              "string": {}
+            }
+          },
+          "nativeDataType": "Maturity Bucket",
+          "nullable": false,
+          "description": "FR 2052A field: Maturity Bucket",
+          "isPartOfKey": false,
+          "recursive": false,
+          "glossaryTerms": {
+            "terms": [
+              {
+                "urn": "urn:li:glossaryTerm:MDRM.maturityBucket",
+                "context": null
+              }
+            ],
+            "auditStamp": {
+              "time": 0,
+              "actor": "urn:li:corpuser:datahub"
+            }
+          }
+        },
+        {
+          "fieldPath": "forwardStartAmount",
+          "type": {
+            "type": {
+              "string": {}
+            }
+          },
+          "nativeDataType": "Maybe",
+          "nullable": false,
+          "description": "FR 2052A field: Forward Start Amount",
+          "isPartOfKey": false,
+          "recursive": false
+        },
+        {
+          "fieldPath": "forwardStartBucket",
+          "type": {
+            "type": {
+              "string": {}
+            }
+          },
+          "nativeDataType": "Maybe",
+          "nullable": false,
+          "description": "FR 2052A field: Forward Start Bucket",
+          "isPartOfKey": false,
+          "recursive": false
+        },
+        {
+          "fieldPath": "collateralClass",
+          "type": {
+            "type": {
+              "string": {}
+            }
+          },
+          "nativeDataType": "Maybe",
+          "nullable": false,
+          "description": "FR 2052A field: Collateral Class",
+          "isPartOfKey": false,
+          "recursive": false,
+          "glossaryTerms": {
+            "terms": [
+              {
+                "urn": "urn:li:glossaryTerm:MDRM.collateralClass",
+                "context": null
+              }
+            ],
+            "auditStamp": {
+              "time": 0,
+              "actor": "urn:li:corpuser:datahub"
+            }
+          }
+        },
+        {
+          "fieldPath": "collateralValue",
+          "type": {
+            "type": {
+              "string": {}
+            }
+          },
+          "nativeDataType": "Maybe",
+          "nullable": false,
+          "description": "FR 2052A field: Collateral Value",
+          "isPartOfKey": false,
+          "recursive": false,
+          "glossaryTerms": {
+            "terms": [
+              {
+                "urn": "urn:li:glossaryTerm:MDRM.collateralValue",
+                "context": null
+              }
+            ],
+            "auditStamp": {
+              "time": 0,
+              "actor": "urn:li:corpuser:datahub"
+            }
+          }
+        },
+        {
+          "fieldPath": "internal",
+          "type": {
+            "type": {
+              "string": {}
+            }
+          },
+          "nativeDataType": "Internal",
+          "nullable": false,
+          "description": "FR 2052A field: Internal",
+          "isPartOfKey": false,
+          "recursive": false
+        },
+        {
+          "fieldPath": "internalCounterparty",
+          "type": {
+            "type": {
+              "string": {}
+            }
+          },
+          "nativeDataType": "Maybe",
+          "nullable": false,
+          "description": "FR 2052A field: Internal Counterparty",
+          "isPartOfKey": false,
+          "recursive": false
+        },
+        {
+          "fieldPath": "businessLine",
+          "type": {
+            "type": {
+              "string": {}
+            }
+          },
+          "nativeDataType": "Business Line",
+          "nullable": false,
+          "description": "FR 2052A field: Business Line",
+          "isPartOfKey": false,
+          "recursive": false,
+          "glossaryTerms": {
+            "terms": [
+              {
+                "urn": "urn:li:glossaryTerm:MDRM.businessLine",
+                "context": null
+              }
+            ],
+            "auditStamp": {
+              "time": 0,
+              "actor": "urn:li:corpuser:datahub"
+            }
+          }
+        }
+      ]
+    }
+  },
+  {
+    "entityType": "dataset",
+    "entityUrn": "urn:li:dataset:(urn:li:dataPlatform:lcr,fr2052a.outflows.other,PROD)",
+    "aspectName": "status",
+    "changeType": "UPSERT",
+    "aspect": {
+      "__type": "Status",
+      "removed": false
+    }
+  },
+  {
+    "entityType": "dataset",
+    "entityUrn": "urn:li:dataset:(urn:li:dataPlatform:lcr,fr2052a.outflows.other,PROD)",
+    "aspectName": "domains",
+    "changeType": "UPSERT",
+    "aspect": {
+      "__type": "Domains",
+      "domains": [
+        "urn:li:domain:federalreserve.gov"
+      ]
+    }
+  },
+  {
+    "entityType": "dataset",
+    "entityUrn": "urn:li:dataset:(urn:li:dataPlatform:lcr,fr2052a.outflows.secured,PROD)",
+    "aspectName": "datasetProperties",
+    "changeType": "UPSERT",
+    "aspect": {
+      "__type": "DatasetProperties",
+      "name": "FR 2052A \u2014 Outflows \u2014 Secured",
+      "description": "Logical model for the FR 2052A Outflows \u2014 Secured data table, derived from the Morphir/Elm LCR reference implementation.\n\n**Product**: CollateralSwaps, CustomerShorts, DollarRolls, ExceptionalCentralBankOperations, FHLBAdvances, FirmShorts, OtherSecuredFinancingTransactions, Repo, SecuritiesLending, SyntheticCustomerShorts (+1 more)",
+      "externalUrl": "https://github.com/acryldata/open-reg-tech-us-lcr",
+      "customProperties": {
+        "section": "Outflows",
+        "table": "Secured",
+        "morphir_module": "us.fr2052a.datatables.outflows.secured",
+        "source": "morphir-ir.json"
+      }
+    }
+  },
+  {
+    "entityType": "dataset",
+    "entityUrn": "urn:li:dataset:(urn:li:dataPlatform:lcr,fr2052a.outflows.secured,PROD)",
+    "aspectName": "subTypes",
+    "changeType": "UPSERT",
+    "aspect": {
+      "__type": "SubTypes",
+      "typeNames": [
+        "Logical Model"
+      ]
+    }
+  },
+  {
+    "entityType": "dataset",
+    "entityUrn": "urn:li:dataset:(urn:li:dataPlatform:lcr,fr2052a.outflows.secured,PROD)",
+    "aspectName": "dataPlatformInstance",
+    "changeType": "UPSERT",
+    "aspect": {
+      "__type": "DataPlatformInstance",
+      "platform": "urn:li:dataPlatform:lcr"
+    }
+  },
+  {
+    "entityType": "dataset",
+    "entityUrn": "urn:li:dataset:(urn:li:dataPlatform:lcr,fr2052a.outflows.secured,PROD)",
+    "aspectName": "schemaMetadata",
+    "changeType": "UPSERT",
+    "aspect": {
+      "__type": "SchemaMetadata",
+      "schemaName": "fr2052a.outflows.secured",
+      "platform": "urn:li:dataPlatform:lcr",
+      "version": 0,
+      "hash": "",
+      "platformSchema": {
+        "__type": "OtherSchema",
+        "rawSchema": ""
+      },
+      "fields": [
+        {
+          "fieldPath": "currency",
+          "type": {
+            "type": {
+              "string": {}
+            }
+          },
+          "nativeDataType": "Currency",
+          "nullable": false,
+          "description": "FR 2052A field: Currency",
+          "isPartOfKey": false,
+          "recursive": false,
+          "glossaryTerms": {
+            "terms": [
+              {
+                "urn": "urn:li:glossaryTerm:MDRM.currency",
+                "context": null
+              }
+            ],
+            "auditStamp": {
+              "time": 0,
+              "actor": "urn:li:corpuser:datahub"
+            }
+          }
+        },
+        {
+          "fieldPath": "converted",
+          "type": {
+            "type": {
+              "string": {}
+            }
+          },
+          "nativeDataType": "Converted",
+          "nullable": false,
+          "description": "FR 2052A field: Converted",
+          "isPartOfKey": false,
+          "recursive": false
+        },
+        {
+          "fieldPath": "reportingEntity",
+          "type": {
+            "type": {
+              "string": {}
+            }
+          },
+          "nativeDataType": "Reporting Entity",
+          "nullable": false,
+          "description": "FR 2052A field: Reporting Entity",
+          "isPartOfKey": false,
+          "recursive": false
+        },
+        {
+          "fieldPath": "product",
+          "type": {
+            "type": {
+              "string": {}
+            }
+          },
+          "nativeDataType": "Product",
+          "nullable": false,
+          "description": "FR 2052A field: Product",
+          "isPartOfKey": false,
+          "recursive": false
+        },
+        {
+          "fieldPath": "subProduct",
+          "type": {
+            "type": {
+              "string": {}
+            }
+          },
+          "nativeDataType": "Maybe",
+          "nullable": false,
+          "description": "FR 2052A field: Sub Product",
+          "isPartOfKey": false,
+          "recursive": false
+        },
+        {
+          "fieldPath": "maturityAmount",
+          "type": {
+            "type": {
+              "string": {}
+            }
+          },
+          "nativeDataType": "Maturity Amount",
+          "nullable": false,
+          "description": "FR 2052A field: Maturity Amount",
+          "isPartOfKey": false,
+          "recursive": false,
+          "glossaryTerms": {
+            "terms": [
+              {
+                "urn": "urn:li:glossaryTerm:MDRM.maturityAmount",
+                "context": null
+              }
+            ],
+            "auditStamp": {
+              "time": 0,
+              "actor": "urn:li:corpuser:datahub"
+            }
+          }
+        },
+        {
+          "fieldPath": "maturityBucket",
+          "type": {
+            "type": {
+              "string": {}
+            }
+          },
+          "nativeDataType": "Maturity Bucket",
+          "nullable": false,
+          "description": "FR 2052A field: Maturity Bucket",
+          "isPartOfKey": false,
+          "recursive": false,
+          "glossaryTerms": {
+            "terms": [
+              {
+                "urn": "urn:li:glossaryTerm:MDRM.maturityBucket",
+                "context": null
+              }
+            ],
+            "auditStamp": {
+              "time": 0,
+              "actor": "urn:li:corpuser:datahub"
+            }
+          }
+        },
+        {
+          "fieldPath": "maturityOptionality",
+          "type": {
+            "type": {
+              "string": {}
+            }
+          },
+          "nativeDataType": "Maybe",
+          "nullable": false,
+          "description": "FR 2052A field: Maturity Optionality",
+          "isPartOfKey": false,
+          "recursive": false
+        },
+        {
+          "fieldPath": "forwardStartAmount",
+          "type": {
+            "type": {
+              "string": {}
+            }
+          },
+          "nativeDataType": "Maybe",
+          "nullable": false,
+          "description": "FR 2052A field: Forward Start Amount",
+          "isPartOfKey": false,
+          "recursive": false
+        },
+        {
+          "fieldPath": "forwardStartBucket",
+          "type": {
+            "type": {
+              "string": {}
+            }
+          },
+          "nativeDataType": "Maybe",
+          "nullable": false,
+          "description": "FR 2052A field: Forward Start Bucket",
+          "isPartOfKey": false,
+          "recursive": false
+        },
+        {
+          "fieldPath": "collateralClass",
+          "type": {
+            "type": {
+              "string": {}
+            }
+          },
+          "nativeDataType": "Collateral Class",
+          "nullable": false,
+          "description": "FR 2052A field: Collateral Class",
+          "isPartOfKey": false,
+          "recursive": false,
+          "glossaryTerms": {
+            "terms": [
+              {
+                "urn": "urn:li:glossaryTerm:MDRM.collateralClass",
+                "context": null
+              }
+            ],
+            "auditStamp": {
+              "time": 0,
+              "actor": "urn:li:corpuser:datahub"
+            }
+          }
+        },
+        {
+          "fieldPath": "collateralValue",
+          "type": {
+            "type": {
+              "string": {}
+            }
+          },
+          "nativeDataType": "Collateral Value",
+          "nullable": false,
+          "description": "FR 2052A field: Collateral Value",
+          "isPartOfKey": false,
+          "recursive": false,
+          "glossaryTerms": {
+            "terms": [
+              {
+                "urn": "urn:li:glossaryTerm:MDRM.collateralValue",
+                "context": null
+              }
+            ],
+            "auditStamp": {
+              "time": 0,
+              "actor": "urn:li:corpuser:datahub"
+            }
+          }
+        },
+        {
+          "fieldPath": "treasuryControl",
+          "type": {
+            "type": {
+              "string": {}
+            }
+          },
+          "nativeDataType": "Treasury Control",
+          "nullable": false,
+          "description": "FR 2052A field: Treasury Control",
+          "isPartOfKey": false,
+          "recursive": false
+        },
+        {
+          "fieldPath": "internal",
+          "type": {
+            "type": {
+              "string": {}
+            }
+          },
+          "nativeDataType": "Internal",
+          "nullable": false,
+          "description": "FR 2052A field: Internal",
+          "isPartOfKey": false,
+          "recursive": false
+        },
+        {
+          "fieldPath": "internalCounterparty",
+          "type": {
+            "type": {
+              "string": {}
+            }
+          },
+          "nativeDataType": "Maybe",
+          "nullable": false,
+          "description": "FR 2052A field: Internal Counterparty",
+          "isPartOfKey": false,
+          "recursive": false
+        },
+        {
+          "fieldPath": "businessLine",
+          "type": {
+            "type": {
+              "string": {}
+            }
+          },
+          "nativeDataType": "Business Line",
+          "nullable": false,
+          "description": "FR 2052A field: Business Line",
+          "isPartOfKey": false,
+          "recursive": false,
+          "glossaryTerms": {
+            "terms": [
+              {
+                "urn": "urn:li:glossaryTerm:MDRM.businessLine",
+                "context": null
+              }
+            ],
+            "auditStamp": {
+              "time": 0,
+              "actor": "urn:li:corpuser:datahub"
+            }
+          }
+        },
+        {
+          "fieldPath": "settlement",
+          "type": {
+            "type": {
+              "string": {}
+            }
+          },
+          "nativeDataType": "Settlement",
+          "nullable": false,
+          "description": "FR 2052A field: Settlement",
+          "isPartOfKey": false,
+          "recursive": false
+        },
+        {
+          "fieldPath": "rehypothecated",
+          "type": {
+            "type": {
+              "string": {}
+            }
+          },
+          "nativeDataType": "Rehypothecated",
+          "nullable": false,
+          "description": "FR 2052A field: Rehypothecated",
+          "isPartOfKey": false,
+          "recursive": false
+        },
+        {
+          "fieldPath": "counterparty",
+          "type": {
+            "type": {
+              "string": {}
+            }
+          },
+          "nativeDataType": "Counterparty",
+          "nullable": false,
+          "description": "FR 2052A field: Counterparty",
+          "isPartOfKey": false,
+          "recursive": false,
+          "glossaryTerms": {
+            "terms": [
+              {
+                "urn": "urn:li:glossaryTerm:MDRM.counterparty",
+                "context": null
+              }
+            ],
+            "auditStamp": {
+              "time": 0,
+              "actor": "urn:li:corpuser:datahub"
+            }
+          }
+        },
+        {
+          "fieldPath": "gSIB",
+          "type": {
+            "type": {
+              "string": {}
+            }
+          },
+          "nativeDataType": "Maybe",
+          "nullable": false,
+          "description": "FR 2052A field: G S I B",
+          "isPartOfKey": false,
+          "recursive": false
+        }
+      ]
+    }
+  },
+  {
+    "entityType": "dataset",
+    "entityUrn": "urn:li:dataset:(urn:li:dataPlatform:lcr,fr2052a.outflows.secured,PROD)",
+    "aspectName": "status",
+    "changeType": "UPSERT",
+    "aspect": {
+      "__type": "Status",
+      "removed": false
+    }
+  },
+  {
+    "entityType": "dataset",
+    "entityUrn": "urn:li:dataset:(urn:li:dataPlatform:lcr,fr2052a.outflows.secured,PROD)",
+    "aspectName": "domains",
+    "changeType": "UPSERT",
+    "aspect": {
+      "__type": "Domains",
+      "domains": [
+        "urn:li:domain:federalreserve.gov"
+      ]
+    }
+  },
+  {
+    "entityType": "dataset",
+    "entityUrn": "urn:li:dataset:(urn:li:dataPlatform:lcr,fr2052a.outflows.wholesale,PROD)",
+    "aspectName": "datasetProperties",
+    "changeType": "UPSERT",
+    "aspect": {
+      "__type": "DatasetProperties",
+      "name": "FR 2052A \u2014 Outflows \u2014 Wholesale",
+      "description": "Logical model for the FR 2052A Outflows \u2014 Wholesale data table, derived from the Morphir/Elm LCR reference implementation.\n\n**Product**: AssetBackedCommercialPaperMultiSeller, AssetBackedCommercialPaperSingleSeller, AssetBackedSecurities, CollateralizedCommercialPaper, CommercialPaper, CoveredBonds, DrawsOnCommittedLines, FreeCredits, GovernmentSupportedDebt, OffshoreBorrowing (+9 more)",
+      "externalUrl": "https://github.com/acryldata/open-reg-tech-us-lcr",
+      "customProperties": {
+        "section": "Outflows",
+        "table": "Wholesale",
+        "morphir_module": "us.fr2052a.datatables.outflows.wholesale",
+        "source": "morphir-ir.json"
+      }
+    }
+  },
+  {
+    "entityType": "dataset",
+    "entityUrn": "urn:li:dataset:(urn:li:dataPlatform:lcr,fr2052a.outflows.wholesale,PROD)",
+    "aspectName": "subTypes",
+    "changeType": "UPSERT",
+    "aspect": {
+      "__type": "SubTypes",
+      "typeNames": [
+        "Logical Model"
+      ]
+    }
+  },
+  {
+    "entityType": "dataset",
+    "entityUrn": "urn:li:dataset:(urn:li:dataPlatform:lcr,fr2052a.outflows.wholesale,PROD)",
+    "aspectName": "dataPlatformInstance",
+    "changeType": "UPSERT",
+    "aspect": {
+      "__type": "DataPlatformInstance",
+      "platform": "urn:li:dataPlatform:lcr"
+    }
+  },
+  {
+    "entityType": "dataset",
+    "entityUrn": "urn:li:dataset:(urn:li:dataPlatform:lcr,fr2052a.outflows.wholesale,PROD)",
+    "aspectName": "schemaMetadata",
+    "changeType": "UPSERT",
+    "aspect": {
+      "__type": "SchemaMetadata",
+      "schemaName": "fr2052a.outflows.wholesale",
+      "platform": "urn:li:dataPlatform:lcr",
+      "version": 0,
+      "hash": "",
+      "platformSchema": {
+        "__type": "OtherSchema",
+        "rawSchema": ""
+      },
+      "fields": [
+        {
+          "fieldPath": "currency",
+          "type": {
+            "type": {
+              "string": {}
+            }
+          },
+          "nativeDataType": "Currency",
+          "nullable": false,
+          "description": "FR 2052A field: Currency",
+          "isPartOfKey": false,
+          "recursive": false,
+          "glossaryTerms": {
+            "terms": [
+              {
+                "urn": "urn:li:glossaryTerm:MDRM.currency",
+                "context": null
+              }
+            ],
+            "auditStamp": {
+              "time": 0,
+              "actor": "urn:li:corpuser:datahub"
+            }
+          }
+        },
+        {
+          "fieldPath": "converted",
+          "type": {
+            "type": {
+              "string": {}
+            }
+          },
+          "nativeDataType": "Converted",
+          "nullable": false,
+          "description": "FR 2052A field: Converted",
+          "isPartOfKey": false,
+          "recursive": false
+        },
+        {
+          "fieldPath": "reportingEntity",
+          "type": {
+            "type": {
+              "string": {}
+            }
+          },
+          "nativeDataType": "Reporting Entity",
+          "nullable": false,
+          "description": "FR 2052A field: Reporting Entity",
+          "isPartOfKey": false,
+          "recursive": false
+        },
+        {
+          "fieldPath": "product",
+          "type": {
+            "type": {
+              "string": {}
+            }
+          },
+          "nativeDataType": "Product",
+          "nullable": false,
+          "description": "FR 2052A field: Product",
+          "isPartOfKey": false,
+          "recursive": false
+        },
+        {
+          "fieldPath": "counterparty",
+          "type": {
+            "type": {
+              "string": {}
+            }
+          },
+          "nativeDataType": "Maybe",
+          "nullable": false,
+          "description": "FR 2052A field: Counterparty",
+          "isPartOfKey": false,
+          "recursive": false,
+          "glossaryTerms": {
+            "terms": [
+              {
+                "urn": "urn:li:glossaryTerm:MDRM.counterparty",
+                "context": null
+              }
+            ],
+            "auditStamp": {
+              "time": 0,
+              "actor": "urn:li:corpuser:datahub"
+            }
+          }
+        },
+        {
+          "fieldPath": "gSIB",
+          "type": {
+            "type": {
+              "string": {}
+            }
+          },
+          "nativeDataType": "Maybe",
+          "nullable": false,
+          "description": "FR 2052A field: G S I B",
+          "isPartOfKey": false,
+          "recursive": false
+        },
+        {
+          "fieldPath": "maturityAmount",
+          "type": {
+            "type": {
+              "string": {}
+            }
+          },
+          "nativeDataType": "Maturity Amount",
+          "nullable": false,
+          "description": "FR 2052A field: Maturity Amount",
+          "isPartOfKey": false,
+          "recursive": false,
+          "glossaryTerms": {
+            "terms": [
+              {
+                "urn": "urn:li:glossaryTerm:MDRM.maturityAmount",
+                "context": null
+              }
+            ],
+            "auditStamp": {
+              "time": 0,
+              "actor": "urn:li:corpuser:datahub"
+            }
+          }
+        },
+        {
+          "fieldPath": "maturityBucket",
+          "type": {
+            "type": {
+              "string": {}
+            }
+          },
+          "nativeDataType": "Maturity Bucket",
+          "nullable": false,
+          "description": "FR 2052A field: Maturity Bucket",
+          "isPartOfKey": false,
+          "recursive": false,
+          "glossaryTerms": {
+            "terms": [
+              {
+                "urn": "urn:li:glossaryTerm:MDRM.maturityBucket",
+                "context": null
+              }
+            ],
+            "auditStamp": {
+              "time": 0,
+              "actor": "urn:li:corpuser:datahub"
+            }
+          }
+        },
+        {
+          "fieldPath": "maturityOptionality",
+          "type": {
+            "type": {
+              "string": {}
+            }
+          },
+          "nativeDataType": "Maybe",
+          "nullable": false,
+          "description": "FR 2052A field: Maturity Optionality",
+          "isPartOfKey": false,
+          "recursive": false
+        },
+        {
+          "fieldPath": "collateralClass",
+          "type": {
+            "type": {
+              "string": {}
+            }
+          },
+          "nativeDataType": "Maybe",
+          "nullable": false,
+          "description": "FR 2052A field: Collateral Class",
+          "isPartOfKey": false,
+          "recursive": false,
+          "glossaryTerms": {
+            "terms": [
+              {
+                "urn": "urn:li:glossaryTerm:MDRM.collateralClass",
+                "context": null
+              }
+            ],
+            "auditStamp": {
+              "time": 0,
+              "actor": "urn:li:corpuser:datahub"
+            }
+          }
+        },
+        {
+          "fieldPath": "collateralValue",
+          "type": {
+            "type": {
+              "string": {}
+            }
+          },
+          "nativeDataType": "Maybe",
+          "nullable": false,
+          "description": "FR 2052A field: Collateral Value",
+          "isPartOfKey": false,
+          "recursive": false,
+          "glossaryTerms": {
+            "terms": [
+              {
+                "urn": "urn:li:glossaryTerm:MDRM.collateralValue",
+                "context": null
+              }
+            ],
+            "auditStamp": {
+              "time": 0,
+              "actor": "urn:li:corpuser:datahub"
+            }
+          }
+        },
+        {
+          "fieldPath": "forwardStartAmount",
+          "type": {
+            "type": {
+              "string": {}
+            }
+          },
+          "nativeDataType": "Maybe",
+          "nullable": false,
+          "description": "FR 2052A field: Forward Start Amount",
+          "isPartOfKey": false,
+          "recursive": false
+        },
+        {
+          "fieldPath": "forwardStartBucket",
+          "type": {
+            "type": {
+              "string": {}
+            }
+          },
+          "nativeDataType": "Maybe",
+          "nullable": false,
+          "description": "FR 2052A field: Forward Start Bucket",
+          "isPartOfKey": false,
+          "recursive": false
+        },
+        {
+          "fieldPath": "internal",
+          "type": {
+            "type": {
+              "string": {}
+            }
+          },
+          "nativeDataType": "Internal",
+          "nullable": false,
+          "description": "FR 2052A field: Internal",
+          "isPartOfKey": false,
+          "recursive": false
+        },
+        {
+          "fieldPath": "internalCounterparty",
+          "type": {
+            "type": {
+              "string": {}
+            }
+          },
+          "nativeDataType": "Maybe",
+          "nullable": false,
+          "description": "FR 2052A field: Internal Counterparty",
+          "isPartOfKey": false,
+          "recursive": false
+        },
+        {
+          "fieldPath": "lossAbsorbency",
+          "type": {
+            "type": {
+              "string": {}
+            }
+          },
+          "nativeDataType": "Maybe",
+          "nullable": false,
+          "description": "FR 2052A field: Loss Absorbency",
+          "isPartOfKey": false,
+          "recursive": false
+        },
+        {
+          "fieldPath": "businessLine",
+          "type": {
+            "type": {
+              "string": {}
+            }
+          },
+          "nativeDataType": "Business Line",
+          "nullable": false,
+          "description": "FR 2052A field: Business Line",
+          "isPartOfKey": false,
+          "recursive": false,
+          "glossaryTerms": {
+            "terms": [
+              {
+                "urn": "urn:li:glossaryTerm:MDRM.businessLine",
+                "context": null
+              }
+            ],
+            "auditStamp": {
+              "time": 0,
+              "actor": "urn:li:corpuser:datahub"
+            }
+          }
+        }
+      ]
+    }
+  },
+  {
+    "entityType": "dataset",
+    "entityUrn": "urn:li:dataset:(urn:li:dataPlatform:lcr,fr2052a.outflows.wholesale,PROD)",
+    "aspectName": "status",
+    "changeType": "UPSERT",
+    "aspect": {
+      "__type": "Status",
+      "removed": false
+    }
+  },
+  {
+    "entityType": "dataset",
+    "entityUrn": "urn:li:dataset:(urn:li:dataPlatform:lcr,fr2052a.outflows.wholesale,PROD)",
+    "aspectName": "domains",
+    "changeType": "UPSERT",
+    "aspect": {
+      "__type": "Domains",
+      "domains": [
+        "urn:li:domain:federalreserve.gov"
+      ]
+    }
+  },
+  {
+    "entityType": "dataset",
+    "entityUrn": "urn:li:dataset:(urn:li:dataPlatform:lcr,fr2052a.supplemental.balance_sheet,PROD)",
+    "aspectName": "datasetProperties",
+    "changeType": "UPSERT",
+    "aspect": {
+      "__type": "DatasetProperties",
+      "name": "FR 2052A \u2014 Supplemental \u2014 Balance Sheet",
+      "description": "Logical model for the FR 2052A Supplemental \u2014 Balance Sheet data table, derived from the Morphir/Elm LCR reference implementation.\n\n**Product**: CarryingValueAdjustment, CounterpartyNetting, NonPerformingAssets, OtherAssets, OtherLiabilities, RegulatoryCapitalElement",
+      "externalUrl": "https://github.com/acryldata/open-reg-tech-us-lcr",
+      "customProperties": {
+        "section": "Supplemental",
+        "table": "Balance Sheet",
+        "morphir_module": "us.fr2052a.datatables.supplemental.balancesheet",
+        "source": "morphir-ir.json"
+      }
+    }
+  },
+  {
+    "entityType": "dataset",
+    "entityUrn": "urn:li:dataset:(urn:li:dataPlatform:lcr,fr2052a.supplemental.balance_sheet,PROD)",
+    "aspectName": "subTypes",
+    "changeType": "UPSERT",
+    "aspect": {
+      "__type": "SubTypes",
+      "typeNames": [
+        "Logical Model"
+      ]
+    }
+  },
+  {
+    "entityType": "dataset",
+    "entityUrn": "urn:li:dataset:(urn:li:dataPlatform:lcr,fr2052a.supplemental.balance_sheet,PROD)",
+    "aspectName": "dataPlatformInstance",
+    "changeType": "UPSERT",
+    "aspect": {
+      "__type": "DataPlatformInstance",
+      "platform": "urn:li:dataPlatform:lcr"
+    }
+  },
+  {
+    "entityType": "dataset",
+    "entityUrn": "urn:li:dataset:(urn:li:dataPlatform:lcr,fr2052a.supplemental.balance_sheet,PROD)",
+    "aspectName": "schemaMetadata",
+    "changeType": "UPSERT",
+    "aspect": {
+      "__type": "SchemaMetadata",
+      "schemaName": "fr2052a.supplemental.balance_sheet",
+      "platform": "urn:li:dataPlatform:lcr",
+      "version": 0,
+      "hash": "",
+      "platformSchema": {
+        "__type": "OtherSchema",
+        "rawSchema": ""
+      },
+      "fields": [
+        {
+          "fieldPath": "currency",
+          "type": {
+            "type": {
+              "string": {}
+            }
+          },
+          "nativeDataType": "Currency",
+          "nullable": false,
+          "description": "FR 2052A field: Currency",
+          "isPartOfKey": false,
+          "recursive": false,
+          "glossaryTerms": {
+            "terms": [
+              {
+                "urn": "urn:li:glossaryTerm:MDRM.currency",
+                "context": null
+              }
+            ],
+            "auditStamp": {
+              "time": 0,
+              "actor": "urn:li:corpuser:datahub"
+            }
+          }
+        },
+        {
+          "fieldPath": "converted",
+          "type": {
+            "type": {
+              "string": {}
+            }
+          },
+          "nativeDataType": "Converted",
+          "nullable": false,
+          "description": "FR 2052A field: Converted",
+          "isPartOfKey": false,
+          "recursive": false
+        },
+        {
+          "fieldPath": "reportingEntity",
+          "type": {
+            "type": {
+              "string": {}
+            }
+          },
+          "nativeDataType": "Reporting Entity",
+          "nullable": false,
+          "description": "FR 2052A field: Reporting Entity",
+          "isPartOfKey": false,
+          "recursive": false
+        },
+        {
+          "fieldPath": "collectionReference",
+          "type": {
+            "type": {
+              "string": {}
+            }
+          },
+          "nativeDataType": "Maybe",
+          "nullable": false,
+          "description": "FR 2052A field: Collection Reference",
+          "isPartOfKey": false,
+          "recursive": false
+        },
+        {
+          "fieldPath": "product",
+          "type": {
+            "type": {
+              "string": {}
+            }
+          },
+          "nativeDataType": "Product",
+          "nullable": false,
+          "description": "FR 2052A field: Product",
+          "isPartOfKey": false,
+          "recursive": false
+        },
+        {
+          "fieldPath": "productReference",
+          "type": {
+            "type": {
+              "string": {}
+            }
+          },
+          "nativeDataType": "Maybe",
+          "nullable": false,
+          "description": "FR 2052A field: Product Reference",
+          "isPartOfKey": false,
+          "recursive": false
+        },
+        {
+          "fieldPath": "subProductReference",
+          "type": {
+            "type": {
+              "string": {}
+            }
+          },
+          "nativeDataType": "Maybe",
+          "nullable": false,
+          "description": "FR 2052A field: Sub Product Reference",
+          "isPartOfKey": false,
+          "recursive": false
+        },
+        {
+          "fieldPath": "collateralClass",
+          "type": {
+            "type": {
+              "string": {}
+            }
+          },
+          "nativeDataType": "Maybe",
+          "nullable": false,
+          "description": "FR 2052A field: Collateral Class",
+          "isPartOfKey": false,
+          "recursive": false,
+          "glossaryTerms": {
+            "terms": [
+              {
+                "urn": "urn:li:glossaryTerm:MDRM.collateralClass",
+                "context": null
+              }
+            ],
+            "auditStamp": {
+              "time": 0,
+              "actor": "urn:li:corpuser:datahub"
+            }
+          }
+        },
+        {
+          "fieldPath": "maturityBucket",
+          "type": {
+            "type": {
+              "string": {}
+            }
+          },
+          "nativeDataType": "Maturity Bucket",
+          "nullable": false,
+          "description": "FR 2052A field: Maturity Bucket",
+          "isPartOfKey": false,
+          "recursive": false,
+          "glossaryTerms": {
+            "terms": [
+              {
+                "urn": "urn:li:glossaryTerm:MDRM.maturityBucket",
+                "context": null
+              }
+            ],
+            "auditStamp": {
+              "time": 0,
+              "actor": "urn:li:corpuser:datahub"
+            }
+          }
+        },
+        {
+          "fieldPath": "effectiveMaturityBucket",
+          "type": {
+            "type": {
+              "string": {}
+            }
+          },
+          "nativeDataType": "Maybe",
+          "nullable": false,
+          "description": "FR 2052A field: Effective Maturity Bucket",
+          "isPartOfKey": false,
+          "recursive": false
+        },
+        {
+          "fieldPath": "encumbranceType",
+          "type": {
+            "type": {
+              "string": {}
+            }
+          },
+          "nativeDataType": "Maybe",
+          "nullable": false,
+          "description": "FR 2052A field: Encumbrance Type",
+          "isPartOfKey": false,
+          "recursive": false
+        },
+        {
+          "fieldPath": "marketValue",
+          "type": {
+            "type": {
+              "string": {}
+            }
+          },
+          "nativeDataType": "Maybe",
+          "nullable": false,
+          "description": "FR 2052A field: Market Value",
+          "isPartOfKey": false,
+          "recursive": false,
+          "glossaryTerms": {
+            "terms": [
+              {
+                "urn": "urn:li:glossaryTerm:MDRM.marketValue",
+                "context": null
+              }
+            ],
+            "auditStamp": {
+              "time": 0,
+              "actor": "urn:li:corpuser:datahub"
+            }
+          }
+        },
+        {
+          "fieldPath": "maturityAmount",
+          "type": {
+            "type": {
+              "string": {}
+            }
+          },
+          "nativeDataType": "Maybe",
+          "nullable": false,
+          "description": "FR 2052A field: Maturity Amount",
+          "isPartOfKey": false,
+          "recursive": false,
+          "glossaryTerms": {
+            "terms": [
+              {
+                "urn": "urn:li:glossaryTerm:MDRM.maturityAmount",
+                "context": null
+              }
+            ],
+            "auditStamp": {
+              "time": 0,
+              "actor": "urn:li:corpuser:datahub"
+            }
+          }
+        },
+        {
+          "fieldPath": "collateralValue",
+          "type": {
+            "type": {
+              "string": {}
+            }
+          },
+          "nativeDataType": "Maybe",
+          "nullable": false,
+          "description": "FR 2052A field: Collateral Value",
+          "isPartOfKey": false,
+          "recursive": false,
+          "glossaryTerms": {
+            "terms": [
+              {
+                "urn": "urn:li:glossaryTerm:MDRM.collateralValue",
+                "context": null
+              }
+            ],
+            "auditStamp": {
+              "time": 0,
+              "actor": "urn:li:corpuser:datahub"
+            }
+          }
+        },
+        {
+          "fieldPath": "counterparty",
+          "type": {
+            "type": {
+              "string": {}
+            }
+          },
+          "nativeDataType": "Maybe",
+          "nullable": false,
+          "description": "FR 2052A field: Counterparty",
+          "isPartOfKey": false,
+          "recursive": false,
+          "glossaryTerms": {
+            "terms": [
+              {
+                "urn": "urn:li:glossaryTerm:MDRM.counterparty",
+                "context": null
+              }
+            ],
+            "auditStamp": {
+              "time": 0,
+              "actor": "urn:li:corpuser:datahub"
+            }
+          }
+        },
+        {
+          "fieldPath": "gSIB",
+          "type": {
+            "type": {
+              "string": {}
+            }
+          },
+          "nativeDataType": "Maybe",
+          "nullable": false,
+          "description": "FR 2052A field: G S I B",
+          "isPartOfKey": false,
+          "recursive": false
+        },
+        {
+          "fieldPath": "riskWeight",
+          "type": {
+            "type": {
+              "string": {}
+            }
+          },
+          "nativeDataType": "Maybe",
+          "nullable": false,
+          "description": "FR 2052A field: Risk Weight",
+          "isPartOfKey": false,
+          "recursive": false,
+          "glossaryTerms": {
+            "terms": [
+              {
+                "urn": "urn:li:glossaryTerm:MDRM.riskWeight",
+                "context": null
+              }
+            ],
+            "auditStamp": {
+              "time": 0,
+              "actor": "urn:li:corpuser:datahub"
+            }
+          }
+        },
+        {
+          "fieldPath": "internal",
+          "type": {
+            "type": {
+              "string": {}
+            }
+          },
+          "nativeDataType": "Internal",
+          "nullable": false,
+          "description": "FR 2052A field: Internal",
+          "isPartOfKey": false,
+          "recursive": false
+        },
+        {
+          "fieldPath": "internalCounterparty",
+          "type": {
+            "type": {
+              "string": {}
+            }
+          },
+          "nativeDataType": "Maybe",
+          "nullable": false,
+          "description": "FR 2052A field: Internal Counterparty",
+          "isPartOfKey": false,
+          "recursive": false
+        }
+      ]
+    }
+  },
+  {
+    "entityType": "dataset",
+    "entityUrn": "urn:li:dataset:(urn:li:dataPlatform:lcr,fr2052a.supplemental.balance_sheet,PROD)",
+    "aspectName": "status",
+    "changeType": "UPSERT",
+    "aspect": {
+      "__type": "Status",
+      "removed": false
+    }
+  },
+  {
+    "entityType": "dataset",
+    "entityUrn": "urn:li:dataset:(urn:li:dataPlatform:lcr,fr2052a.supplemental.balance_sheet,PROD)",
+    "aspectName": "domains",
+    "changeType": "UPSERT",
+    "aspect": {
+      "__type": "Domains",
+      "domains": [
+        "urn:li:domain:federalreserve.gov"
+      ]
+    }
+  },
+  {
+    "entityType": "dataset",
+    "entityUrn": "urn:li:dataset:(urn:li:dataPlatform:lcr,fr2052a.supplemental.derivatives_collateral,PROD)",
+    "aspectName": "datasetProperties",
+    "changeType": "UPSERT",
+    "aspect": {
+      "__type": "DatasetProperties",
+      "name": "FR 2052A \u2014 Supplemental \u2014 Derivatives Collateral",
+      "description": "Logical model for the FR 2052A Supplemental \u2014 Derivatives Collateral data table, derived from the Morphir/Elm LCR reference implementation.\n\n**Product**: CollateralDisputesDeliverables, CollateralDisputesReceivables, DerivativeCCPDefaultFundContribution, DerivativeCollateralSubstitutionCapacity, DerivativeCollateralSubstitutionRisk, DerivativeSettlementPaymentsDelivered, DerivativeSettlementPaymentsReceived, GrossDerivativeAssetValues, GrossDerivativeLiabilityValues, InitialMarginPostedCustomer (+11 more)",
+      "externalUrl": "https://github.com/acryldata/open-reg-tech-us-lcr",
+      "customProperties": {
+        "section": "Supplemental",
+        "table": "Derivatives Collateral",
+        "morphir_module": "us.fr2052a.datatables.supplemental.derivativescollateral",
+        "source": "morphir-ir.json"
+      }
+    }
+  },
+  {
+    "entityType": "dataset",
+    "entityUrn": "urn:li:dataset:(urn:li:dataPlatform:lcr,fr2052a.supplemental.derivatives_collateral,PROD)",
+    "aspectName": "subTypes",
+    "changeType": "UPSERT",
+    "aspect": {
+      "__type": "SubTypes",
+      "typeNames": [
+        "Logical Model"
+      ]
+    }
+  },
+  {
+    "entityType": "dataset",
+    "entityUrn": "urn:li:dataset:(urn:li:dataPlatform:lcr,fr2052a.supplemental.derivatives_collateral,PROD)",
+    "aspectName": "dataPlatformInstance",
+    "changeType": "UPSERT",
+    "aspect": {
+      "__type": "DataPlatformInstance",
+      "platform": "urn:li:dataPlatform:lcr"
+    }
+  },
+  {
+    "entityType": "dataset",
+    "entityUrn": "urn:li:dataset:(urn:li:dataPlatform:lcr,fr2052a.supplemental.derivatives_collateral,PROD)",
+    "aspectName": "schemaMetadata",
+    "changeType": "UPSERT",
+    "aspect": {
+      "__type": "SchemaMetadata",
+      "schemaName": "fr2052a.supplemental.derivatives_collateral",
+      "platform": "urn:li:dataPlatform:lcr",
+      "version": 0,
+      "hash": "",
+      "platformSchema": {
+        "__type": "OtherSchema",
+        "rawSchema": ""
+      },
+      "fields": [
+        {
+          "fieldPath": "currency",
+          "type": {
+            "type": {
+              "string": {}
+            }
+          },
+          "nativeDataType": "Currency",
+          "nullable": false,
+          "description": "FR 2052A field: Currency",
+          "isPartOfKey": false,
+          "recursive": false,
+          "glossaryTerms": {
+            "terms": [
+              {
+                "urn": "urn:li:glossaryTerm:MDRM.currency",
+                "context": null
+              }
+            ],
+            "auditStamp": {
+              "time": 0,
+              "actor": "urn:li:corpuser:datahub"
+            }
+          }
+        },
+        {
+          "fieldPath": "converted",
+          "type": {
+            "type": {
+              "string": {}
+            }
+          },
+          "nativeDataType": "Converted",
+          "nullable": false,
+          "description": "FR 2052A field: Converted",
+          "isPartOfKey": false,
+          "recursive": false
+        },
+        {
+          "fieldPath": "reportingEntity",
+          "type": {
+            "type": {
+              "string": {}
+            }
+          },
+          "nativeDataType": "Reporting Entity",
+          "nullable": false,
+          "description": "FR 2052A field: Reporting Entity",
+          "isPartOfKey": false,
+          "recursive": false
+        },
+        {
+          "fieldPath": "product",
+          "type": {
+            "type": {
+              "string": {}
+            }
+          },
+          "nativeDataType": "Product",
+          "nullable": false,
+          "description": "FR 2052A field: Product",
+          "isPartOfKey": false,
+          "recursive": false
+        },
+        {
+          "fieldPath": "subProduct",
+          "type": {
+            "type": {
+              "string": {}
+            }
+          },
+          "nativeDataType": "Maybe",
+          "nullable": false,
+          "description": "FR 2052A field: Sub Product",
+          "isPartOfKey": false,
+          "recursive": false
+        },
+        {
+          "fieldPath": "subProduct2",
+          "type": {
+            "type": {
+              "string": {}
+            }
+          },
+          "nativeDataType": "Maybe",
+          "nullable": false,
+          "description": "FR 2052A field: Sub Product 2",
+          "isPartOfKey": false,
+          "recursive": false
+        },
+        {
+          "fieldPath": "marketValue",
+          "type": {
+            "type": {
+              "string": {}
+            }
+          },
+          "nativeDataType": "Market Value",
+          "nullable": false,
+          "description": "FR 2052A field: Market Value",
+          "isPartOfKey": false,
+          "recursive": false,
+          "glossaryTerms": {
+            "terms": [
+              {
+                "urn": "urn:li:glossaryTerm:MDRM.marketValue",
+                "context": null
+              }
+            ],
+            "auditStamp": {
+              "time": 0,
+              "actor": "urn:li:corpuser:datahub"
+            }
+          }
+        },
+        {
+          "fieldPath": "collateralClass",
+          "type": {
+            "type": {
+              "string": {}
+            }
+          },
+          "nativeDataType": "Maybe",
+          "nullable": false,
+          "description": "FR 2052A field: Collateral Class",
+          "isPartOfKey": false,
+          "recursive": false,
+          "glossaryTerms": {
+            "terms": [
+              {
+                "urn": "urn:li:glossaryTerm:MDRM.collateralClass",
+                "context": null
+              }
+            ],
+            "auditStamp": {
+              "time": 0,
+              "actor": "urn:li:corpuser:datahub"
+            }
+          }
+        },
+        {
+          "fieldPath": "collateralLevel",
+          "type": {
+            "type": {
+              "string": {}
+            }
+          },
+          "nativeDataType": "Maybe",
+          "nullable": false,
+          "description": "FR 2052A field: Collateral Level",
+          "isPartOfKey": false,
+          "recursive": false
+        },
+        {
+          "fieldPath": "counterparty",
+          "type": {
+            "type": {
+              "string": {}
+            }
+          },
+          "nativeDataType": "Maybe",
+          "nullable": false,
+          "description": "FR 2052A field: Counterparty",
+          "isPartOfKey": false,
+          "recursive": false,
+          "glossaryTerms": {
+            "terms": [
+              {
+                "urn": "urn:li:glossaryTerm:MDRM.counterparty",
+                "context": null
+              }
+            ],
+            "auditStamp": {
+              "time": 0,
+              "actor": "urn:li:corpuser:datahub"
+            }
+          }
+        },
+        {
+          "fieldPath": "gSIB",
+          "type": {
+            "type": {
+              "string": {}
+            }
+          },
+          "nativeDataType": "Maybe",
+          "nullable": false,
+          "description": "FR 2052A field: G S I B",
+          "isPartOfKey": false,
+          "recursive": false
+        },
+        {
+          "fieldPath": "effectiveMaturityBucket",
+          "type": {
+            "type": {
+              "string": {}
+            }
+          },
+          "nativeDataType": "Maybe",
+          "nullable": false,
+          "description": "FR 2052A field: Effective Maturity Bucket",
+          "isPartOfKey": false,
+          "recursive": false
+        },
+        {
+          "fieldPath": "encumbranceType",
+          "type": {
+            "type": {
+              "string": {}
+            }
+          },
+          "nativeDataType": "Maybe",
+          "nullable": false,
+          "description": "FR 2052A field: Encumbrance Type",
+          "isPartOfKey": false,
+          "recursive": false
+        },
+        {
+          "fieldPath": "nettingEligible",
+          "type": {
+            "type": {
+              "string": {}
+            }
+          },
+          "nativeDataType": "Maybe",
+          "nullable": false,
+          "description": "FR 2052A field: Netting Eligible",
+          "isPartOfKey": false,
+          "recursive": false
+        },
+        {
+          "fieldPath": "treasuryControl",
+          "type": {
+            "type": {
+              "string": {}
+            }
+          },
+          "nativeDataType": "Maybe",
+          "nullable": false,
+          "description": "FR 2052A field: Treasury Control",
+          "isPartOfKey": false,
+          "recursive": false
+        },
+        {
+          "fieldPath": "internal",
+          "type": {
+            "type": {
+              "string": {}
+            }
+          },
+          "nativeDataType": "Internal",
+          "nullable": false,
+          "description": "FR 2052A field: Internal",
+          "isPartOfKey": false,
+          "recursive": false
+        },
+        {
+          "fieldPath": "internalCounterparty",
+          "type": {
+            "type": {
+              "string": {}
+            }
+          },
+          "nativeDataType": "Maybe",
+          "nullable": false,
+          "description": "FR 2052A field: Internal Counterparty",
+          "isPartOfKey": false,
+          "recursive": false
+        },
+        {
+          "fieldPath": "businessLine",
+          "type": {
+            "type": {
+              "string": {}
+            }
+          },
+          "nativeDataType": "Business Line",
+          "nullable": false,
+          "description": "FR 2052A field: Business Line",
+          "isPartOfKey": false,
+          "recursive": false,
+          "glossaryTerms": {
+            "terms": [
+              {
+                "urn": "urn:li:glossaryTerm:MDRM.businessLine",
+                "context": null
+              }
+            ],
+            "auditStamp": {
+              "time": 0,
+              "actor": "urn:li:corpuser:datahub"
+            }
+          }
+        }
+      ]
+    }
+  },
+  {
+    "entityType": "dataset",
+    "entityUrn": "urn:li:dataset:(urn:li:dataPlatform:lcr,fr2052a.supplemental.derivatives_collateral,PROD)",
+    "aspectName": "status",
+    "changeType": "UPSERT",
+    "aspect": {
+      "__type": "Status",
+      "removed": false
+    }
+  },
+  {
+    "entityType": "dataset",
+    "entityUrn": "urn:li:dataset:(urn:li:dataPlatform:lcr,fr2052a.supplemental.derivatives_collateral,PROD)",
+    "aspectName": "domains",
+    "changeType": "UPSERT",
+    "aspect": {
+      "__type": "Domains",
+      "domains": [
+        "urn:li:domain:federalreserve.gov"
+      ]
+    }
+  },
+  {
+    "entityType": "dataset",
+    "entityUrn": "urn:li:dataset:(urn:li:dataPlatform:lcr,fr2052a.supplemental.foreign_exchange,PROD)",
+    "aspectName": "datasetProperties",
+    "changeType": "UPSERT",
+    "aspect": {
+      "__type": "DatasetProperties",
+      "name": "FR 2052A \u2014 Supplemental \u2014 Foreign Exchange",
+      "description": "Logical model for the FR 2052A Supplemental \u2014 Foreign Exchange data table, derived from the Morphir/Elm LCR reference implementation.\n\n**Product**: ForwardsAndFutures, Spot, Swaps",
+      "externalUrl": "https://github.com/acryldata/open-reg-tech-us-lcr",
+      "customProperties": {
+        "section": "Supplemental",
+        "table": "Foreign Exchange",
+        "morphir_module": "us.fr2052a.datatables.supplemental.foreignexchange",
+        "source": "morphir-ir.json"
+      }
+    }
+  },
+  {
+    "entityType": "dataset",
+    "entityUrn": "urn:li:dataset:(urn:li:dataPlatform:lcr,fr2052a.supplemental.foreign_exchange,PROD)",
+    "aspectName": "subTypes",
+    "changeType": "UPSERT",
+    "aspect": {
+      "__type": "SubTypes",
+      "typeNames": [
+        "Logical Model"
+      ]
+    }
+  },
+  {
+    "entityType": "dataset",
+    "entityUrn": "urn:li:dataset:(urn:li:dataPlatform:lcr,fr2052a.supplemental.foreign_exchange,PROD)",
+    "aspectName": "dataPlatformInstance",
+    "changeType": "UPSERT",
+    "aspect": {
+      "__type": "DataPlatformInstance",
+      "platform": "urn:li:dataPlatform:lcr"
+    }
+  },
+  {
+    "entityType": "dataset",
+    "entityUrn": "urn:li:dataset:(urn:li:dataPlatform:lcr,fr2052a.supplemental.foreign_exchange,PROD)",
+    "aspectName": "schemaMetadata",
+    "changeType": "UPSERT",
+    "aspect": {
+      "__type": "SchemaMetadata",
+      "schemaName": "fr2052a.supplemental.foreign_exchange",
+      "platform": "urn:li:dataPlatform:lcr",
+      "version": 0,
+      "hash": "",
+      "platformSchema": {
+        "__type": "OtherSchema",
+        "rawSchema": ""
+      },
+      "fields": [
+        {
+          "fieldPath": "currency",
+          "type": {
+            "type": {
+              "string": {}
+            }
+          },
+          "nativeDataType": "Currency",
+          "nullable": false,
+          "description": "FR 2052A field: Currency",
+          "isPartOfKey": false,
+          "recursive": false,
+          "glossaryTerms": {
+            "terms": [
+              {
+                "urn": "urn:li:glossaryTerm:MDRM.currency",
+                "context": null
+              }
+            ],
+            "auditStamp": {
+              "time": 0,
+              "actor": "urn:li:corpuser:datahub"
+            }
+          }
+        },
+        {
+          "fieldPath": "converted",
+          "type": {
+            "type": {
+              "string": {}
+            }
+          },
+          "nativeDataType": "Converted",
+          "nullable": false,
+          "description": "FR 2052A field: Converted",
+          "isPartOfKey": false,
+          "recursive": false
+        },
+        {
+          "fieldPath": "reportingEntity",
+          "type": {
+            "type": {
+              "string": {}
+            }
+          },
+          "nativeDataType": "Reporting Entity",
+          "nullable": false,
+          "description": "FR 2052A field: Reporting Entity",
+          "isPartOfKey": false,
+          "recursive": false
+        },
+        {
+          "fieldPath": "product",
+          "type": {
+            "type": {
+              "string": {}
+            }
+          },
+          "nativeDataType": "Product",
+          "nullable": false,
+          "description": "FR 2052A field: Product",
+          "isPartOfKey": false,
+          "recursive": false
+        },
+        {
+          "fieldPath": "maturityAmountCurrency1",
+          "type": {
+            "type": {
+              "string": {}
+            }
+          },
+          "nativeDataType": "Maturity Amount Currency 1",
+          "nullable": false,
+          "description": "FR 2052A field: Maturity Amount Currency 1",
+          "isPartOfKey": false,
+          "recursive": false
+        },
+        {
+          "fieldPath": "maturityAmountCurrency2",
+          "type": {
+            "type": {
+              "string": {}
+            }
+          },
+          "nativeDataType": "Maturity Amount Currency 2",
+          "nullable": false,
+          "description": "FR 2052A field: Maturity Amount Currency 2",
+          "isPartOfKey": false,
+          "recursive": false
+        },
+        {
+          "fieldPath": "maturityBucket",
+          "type": {
+            "type": {
+              "string": {}
+            }
+          },
+          "nativeDataType": "Maturity Bucket",
+          "nullable": false,
+          "description": "FR 2052A field: Maturity Bucket",
+          "isPartOfKey": false,
+          "recursive": false,
+          "glossaryTerms": {
+            "terms": [
+              {
+                "urn": "urn:li:glossaryTerm:MDRM.maturityBucket",
+                "context": null
+              }
+            ],
+            "auditStamp": {
+              "time": 0,
+              "actor": "urn:li:corpuser:datahub"
+            }
+          }
+        },
+        {
+          "fieldPath": "foreignExchangeOptionDirection",
+          "type": {
+            "type": {
+              "string": {}
+            }
+          },
+          "nativeDataType": "Maybe",
+          "nullable": false,
+          "description": "FR 2052A field: Foreign Exchange Option Direction",
+          "isPartOfKey": false,
+          "recursive": false
+        },
+        {
+          "fieldPath": "forwardStartAmountCurrency1",
+          "type": {
+            "type": {
+              "string": {}
+            }
+          },
+          "nativeDataType": "Maybe",
+          "nullable": false,
+          "description": "FR 2052A field: Forward Start Amount Currency 1",
+          "isPartOfKey": false,
+          "recursive": false
+        },
+        {
+          "fieldPath": "forwardStartAmountCurrency2",
+          "type": {
+            "type": {
+              "string": {}
+            }
+          },
+          "nativeDataType": "Maybe",
+          "nullable": false,
+          "description": "FR 2052A field: Forward Start Amount Currency 2",
+          "isPartOfKey": false,
+          "recursive": false
+        },
+        {
+          "fieldPath": "forwardStartBucket",
+          "type": {
+            "type": {
+              "string": {}
+            }
+          },
+          "nativeDataType": "Maybe",
+          "nullable": false,
+          "description": "FR 2052A field: Forward Start Bucket",
+          "isPartOfKey": false,
+          "recursive": false
+        },
+        {
+          "fieldPath": "counterparty",
+          "type": {
+            "type": {
+              "string": {}
+            }
+          },
+          "nativeDataType": "Counterparty",
+          "nullable": false,
+          "description": "FR 2052A field: Counterparty",
+          "isPartOfKey": false,
+          "recursive": false,
+          "glossaryTerms": {
+            "terms": [
+              {
+                "urn": "urn:li:glossaryTerm:MDRM.counterparty",
+                "context": null
+              }
+            ],
+            "auditStamp": {
+              "time": 0,
+              "actor": "urn:li:corpuser:datahub"
+            }
+          }
+        },
+        {
+          "fieldPath": "gSIB",
+          "type": {
+            "type": {
+              "string": {}
+            }
+          },
+          "nativeDataType": "Maybe",
+          "nullable": false,
+          "description": "FR 2052A field: G S I B",
+          "isPartOfKey": false,
+          "recursive": false
+        },
+        {
+          "fieldPath": "settlement",
+          "type": {
+            "type": {
+              "string": {}
+            }
+          },
+          "nativeDataType": "Settlement",
+          "nullable": false,
+          "description": "FR 2052A field: Settlement",
+          "isPartOfKey": false,
+          "recursive": false
+        },
+        {
+          "fieldPath": "businessLine",
+          "type": {
+            "type": {
+              "string": {}
+            }
+          },
+          "nativeDataType": "Business Line",
+          "nullable": false,
+          "description": "FR 2052A field: Business Line",
+          "isPartOfKey": false,
+          "recursive": false,
+          "glossaryTerms": {
+            "terms": [
+              {
+                "urn": "urn:li:glossaryTerm:MDRM.businessLine",
+                "context": null
+              }
+            ],
+            "auditStamp": {
+              "time": 0,
+              "actor": "urn:li:corpuser:datahub"
+            }
+          }
+        },
+        {
+          "fieldPath": "internal",
+          "type": {
+            "type": {
+              "string": {}
+            }
+          },
+          "nativeDataType": "Internal",
+          "nullable": false,
+          "description": "FR 2052A field: Internal",
+          "isPartOfKey": false,
+          "recursive": false
+        },
+        {
+          "fieldPath": "internalCounterparty",
+          "type": {
+            "type": {
+              "string": {}
+            }
+          },
+          "nativeDataType": "Maybe",
+          "nullable": false,
+          "description": "FR 2052A field: Internal Counterparty",
+          "isPartOfKey": false,
+          "recursive": false
+        }
+      ]
+    }
+  },
+  {
+    "entityType": "dataset",
+    "entityUrn": "urn:li:dataset:(urn:li:dataPlatform:lcr,fr2052a.supplemental.foreign_exchange,PROD)",
+    "aspectName": "status",
+    "changeType": "UPSERT",
+    "aspect": {
+      "__type": "Status",
+      "removed": false
+    }
+  },
+  {
+    "entityType": "dataset",
+    "entityUrn": "urn:li:dataset:(urn:li:dataPlatform:lcr,fr2052a.supplemental.foreign_exchange,PROD)",
+    "aspectName": "domains",
+    "changeType": "UPSERT",
+    "aspect": {
+      "__type": "Domains",
+      "domains": [
+        "urn:li:domain:federalreserve.gov"
+      ]
+    }
+  },
+  {
+    "entityType": "dataset",
+    "entityUrn": "urn:li:dataset:(urn:li:dataPlatform:lcr,fr2052a.supplemental.informational,PROD)",
+    "aspectName": "datasetProperties",
+    "changeType": "UPSERT",
+    "aspect": {
+      "__type": "DatasetProperties",
+      "name": "FR 2052A \u2014 Supplemental \u2014 Informational",
+      "description": "Logical model for the FR 2052A Supplemental \u2014 Informational data table, derived from the Morphir/Elm LCR reference implementation.\n\n**Product**: FRB23ACapacity, GrossClientWiresPaid, GrossClientWiresReceived, LongMarketValueClientAssets, ShortMarketValueClientAssets, SubsidiaryLiquidityNotTransferrable",
+      "externalUrl": "https://github.com/acryldata/open-reg-tech-us-lcr",
+      "customProperties": {
+        "section": "Supplemental",
+        "table": "Informational",
+        "morphir_module": "us.fr2052a.datatables.supplemental.informational",
+        "source": "morphir-ir.json"
+      }
+    }
+  },
+  {
+    "entityType": "dataset",
+    "entityUrn": "urn:li:dataset:(urn:li:dataPlatform:lcr,fr2052a.supplemental.informational,PROD)",
+    "aspectName": "subTypes",
+    "changeType": "UPSERT",
+    "aspect": {
+      "__type": "SubTypes",
+      "typeNames": [
+        "Logical Model"
+      ]
+    }
+  },
+  {
+    "entityType": "dataset",
+    "entityUrn": "urn:li:dataset:(urn:li:dataPlatform:lcr,fr2052a.supplemental.informational,PROD)",
+    "aspectName": "dataPlatformInstance",
+    "changeType": "UPSERT",
+    "aspect": {
+      "__type": "DataPlatformInstance",
+      "platform": "urn:li:dataPlatform:lcr"
+    }
+  },
+  {
+    "entityType": "dataset",
+    "entityUrn": "urn:li:dataset:(urn:li:dataPlatform:lcr,fr2052a.supplemental.informational,PROD)",
+    "aspectName": "schemaMetadata",
+    "changeType": "UPSERT",
+    "aspect": {
+      "__type": "SchemaMetadata",
+      "schemaName": "fr2052a.supplemental.informational",
+      "platform": "urn:li:dataPlatform:lcr",
+      "version": 0,
+      "hash": "",
+      "platformSchema": {
+        "__type": "OtherSchema",
+        "rawSchema": ""
+      },
+      "fields": [
+        {
+          "fieldPath": "currency",
+          "type": {
+            "type": {
+              "string": {}
+            }
+          },
+          "nativeDataType": "Currency",
+          "nullable": false,
+          "description": "FR 2052A field: Currency",
+          "isPartOfKey": false,
+          "recursive": false,
+          "glossaryTerms": {
+            "terms": [
+              {
+                "urn": "urn:li:glossaryTerm:MDRM.currency",
+                "context": null
+              }
+            ],
+            "auditStamp": {
+              "time": 0,
+              "actor": "urn:li:corpuser:datahub"
+            }
+          }
+        },
+        {
+          "fieldPath": "converted",
+          "type": {
+            "type": {
+              "string": {}
+            }
+          },
+          "nativeDataType": "Converted",
+          "nullable": false,
+          "description": "FR 2052A field: Converted",
+          "isPartOfKey": false,
+          "recursive": false
+        },
+        {
+          "fieldPath": "reportingEntity",
+          "type": {
+            "type": {
+              "string": {}
+            }
+          },
+          "nativeDataType": "Reporting Entity",
+          "nullable": false,
+          "description": "FR 2052A field: Reporting Entity",
+          "isPartOfKey": false,
+          "recursive": false
+        },
+        {
+          "fieldPath": "product",
+          "type": {
+            "type": {
+              "string": {}
+            }
+          },
+          "nativeDataType": "Product",
+          "nullable": false,
+          "description": "FR 2052A field: Product",
+          "isPartOfKey": false,
+          "recursive": false
+        },
+        {
+          "fieldPath": "marketValue",
+          "type": {
+            "type": {
+              "string": {}
+            }
+          },
+          "nativeDataType": "Market Value",
+          "nullable": false,
+          "description": "FR 2052A field: Market Value",
+          "isPartOfKey": false,
+          "recursive": false,
+          "glossaryTerms": {
+            "terms": [
+              {
+                "urn": "urn:li:glossaryTerm:MDRM.marketValue",
+                "context": null
+              }
+            ],
+            "auditStamp": {
+              "time": 0,
+              "actor": "urn:li:corpuser:datahub"
+            }
+          }
+        },
+        {
+          "fieldPath": "collateralClass",
+          "type": {
+            "type": {
+              "string": {}
+            }
+          },
+          "nativeDataType": "Maybe",
+          "nullable": false,
+          "description": "FR 2052A field: Collateral Class",
+          "isPartOfKey": false,
+          "recursive": false,
+          "glossaryTerms": {
+            "terms": [
+              {
+                "urn": "urn:li:glossaryTerm:MDRM.collateralClass",
+                "context": null
+              }
+            ],
+            "auditStamp": {
+              "time": 0,
+              "actor": "urn:li:corpuser:datahub"
+            }
+          }
+        },
+        {
+          "fieldPath": "internal",
+          "type": {
+            "type": {
+              "string": {}
+            }
+          },
+          "nativeDataType": "Internal",
+          "nullable": false,
+          "description": "FR 2052A field: Internal",
+          "isPartOfKey": false,
+          "recursive": false
+        },
+        {
+          "fieldPath": "internalCounterparty",
+          "type": {
+            "type": {
+              "string": {}
+            }
+          },
+          "nativeDataType": "Maybe",
+          "nullable": false,
+          "description": "FR 2052A field: Internal Counterparty",
+          "isPartOfKey": false,
+          "recursive": false
+        },
+        {
+          "fieldPath": "businessLine",
+          "type": {
+            "type": {
+              "string": {}
+            }
+          },
+          "nativeDataType": "Business Line",
+          "nullable": false,
+          "description": "FR 2052A field: Business Line",
+          "isPartOfKey": false,
+          "recursive": false,
+          "glossaryTerms": {
+            "terms": [
+              {
+                "urn": "urn:li:glossaryTerm:MDRM.businessLine",
+                "context": null
+              }
+            ],
+            "auditStamp": {
+              "time": 0,
+              "actor": "urn:li:corpuser:datahub"
+            }
+          }
+        }
+      ]
+    }
+  },
+  {
+    "entityType": "dataset",
+    "entityUrn": "urn:li:dataset:(urn:li:dataPlatform:lcr,fr2052a.supplemental.informational,PROD)",
+    "aspectName": "status",
+    "changeType": "UPSERT",
+    "aspect": {
+      "__type": "Status",
+      "removed": false
+    }
+  },
+  {
+    "entityType": "dataset",
+    "entityUrn": "urn:li:dataset:(urn:li:dataPlatform:lcr,fr2052a.supplemental.informational,PROD)",
+    "aspectName": "domains",
+    "changeType": "UPSERT",
+    "aspect": {
+      "__type": "Domains",
+      "domains": [
+        "urn:li:domain:federalreserve.gov"
+      ]
+    }
+  },
+  {
+    "entityType": "dataset",
+    "entityUrn": "urn:li:dataset:(urn:li:dataPlatform:lcr,fr2052a.supplemental.liquidity_risk_measurement,PROD)",
+    "aspectName": "datasetProperties",
+    "changeType": "UPSERT",
+    "aspect": {
+      "__type": "DatasetProperties",
+      "name": "FR 2052A \u2014 Supplemental \u2014 Liquidity Risk Measurement",
+      "description": "Logical model for the FR 2052A Supplemental \u2014 Liquidity Risk Measurement data table, derived from the Morphir/Elm LCR reference implementation.\n\n**Product**: AdditionalFundingRequirementForOffBalanceSheetRehypothecatedAssets, LiquidityCoverageRatio, NetStableFundingRatio, NonStructuredDebtMaturingInGreaterThan30DaysPrimaryMarketMaker, StructuredDebtMaturingInGreaterThan30DaysPrimaryMarketMaker, SubsidiaryFundingAvailableForTransfer, SubsidiaryFundingThatCannotBeTransferred, SubsidiaryLiquidityAvailableForTransfer, SubsidiaryLiquidityThatCannotBeTransferred, UnencumberedAssetHedgesEarlyTerminationOutflows",
+      "externalUrl": "https://github.com/acryldata/open-reg-tech-us-lcr",
+      "customProperties": {
+        "section": "Supplemental",
+        "table": "Liquidity Risk Measurement",
+        "morphir_module": "us.fr2052a.datatables.supplemental.liquidityriskmeasurement",
+        "source": "morphir-ir.json"
+      }
+    }
+  },
+  {
+    "entityType": "dataset",
+    "entityUrn": "urn:li:dataset:(urn:li:dataPlatform:lcr,fr2052a.supplemental.liquidity_risk_measurement,PROD)",
+    "aspectName": "subTypes",
+    "changeType": "UPSERT",
+    "aspect": {
+      "__type": "SubTypes",
+      "typeNames": [
+        "Logical Model"
+      ]
+    }
+  },
+  {
+    "entityType": "dataset",
+    "entityUrn": "urn:li:dataset:(urn:li:dataPlatform:lcr,fr2052a.supplemental.liquidity_risk_measurement,PROD)",
+    "aspectName": "dataPlatformInstance",
+    "changeType": "UPSERT",
+    "aspect": {
+      "__type": "DataPlatformInstance",
+      "platform": "urn:li:dataPlatform:lcr"
+    }
+  },
+  {
+    "entityType": "dataset",
+    "entityUrn": "urn:li:dataset:(urn:li:dataPlatform:lcr,fr2052a.supplemental.liquidity_risk_measurement,PROD)",
+    "aspectName": "schemaMetadata",
+    "changeType": "UPSERT",
+    "aspect": {
+      "__type": "SchemaMetadata",
+      "schemaName": "fr2052a.supplemental.liquidity_risk_measurement",
+      "platform": "urn:li:dataPlatform:lcr",
+      "version": 0,
+      "hash": "",
+      "platformSchema": {
+        "__type": "OtherSchema",
+        "rawSchema": ""
+      },
+      "fields": [
+        {
+          "fieldPath": "currency",
+          "type": {
+            "type": {
+              "string": {}
+            }
+          },
+          "nativeDataType": "Currency",
+          "nullable": false,
+          "description": "FR 2052A field: Currency",
+          "isPartOfKey": false,
+          "recursive": false,
+          "glossaryTerms": {
+            "terms": [
+              {
+                "urn": "urn:li:glossaryTerm:MDRM.currency",
+                "context": null
+              }
+            ],
+            "auditStamp": {
+              "time": 0,
+              "actor": "urn:li:corpuser:datahub"
+            }
+          }
+        },
+        {
+          "fieldPath": "converted",
+          "type": {
+            "type": {
+              "string": {}
+            }
+          },
+          "nativeDataType": "Converted",
+          "nullable": false,
+          "description": "FR 2052A field: Converted",
+          "isPartOfKey": false,
+          "recursive": false
+        },
+        {
+          "fieldPath": "reportingEntity",
+          "type": {
+            "type": {
+              "string": {}
+            }
+          },
+          "nativeDataType": "Reporting Entity",
+          "nullable": false,
+          "description": "FR 2052A field: Reporting Entity",
+          "isPartOfKey": false,
+          "recursive": false
+        },
+        {
+          "fieldPath": "product",
+          "type": {
+            "type": {
+              "string": {}
+            }
+          },
+          "nativeDataType": "Product",
+          "nullable": false,
+          "description": "FR 2052A field: Product",
+          "isPartOfKey": false,
+          "recursive": false
+        },
+        {
+          "fieldPath": "marketValue",
+          "type": {
+            "type": {
+              "string": {}
+            }
+          },
+          "nativeDataType": "Market Value",
+          "nullable": false,
+          "description": "FR 2052A field: Market Value",
+          "isPartOfKey": false,
+          "recursive": false,
+          "glossaryTerms": {
+            "terms": [
+              {
+                "urn": "urn:li:glossaryTerm:MDRM.marketValue",
+                "context": null
+              }
+            ],
+            "auditStamp": {
+              "time": 0,
+              "actor": "urn:li:corpuser:datahub"
+            }
+          }
+        },
+        {
+          "fieldPath": "collateralClass",
+          "type": {
+            "type": {
+              "string": {}
+            }
+          },
+          "nativeDataType": "Maybe",
+          "nullable": false,
+          "description": "FR 2052A field: Collateral Class",
+          "isPartOfKey": false,
+          "recursive": false,
+          "glossaryTerms": {
+            "terms": [
+              {
+                "urn": "urn:li:glossaryTerm:MDRM.collateralClass",
+                "context": null
+              }
+            ],
+            "auditStamp": {
+              "time": 0,
+              "actor": "urn:li:corpuser:datahub"
+            }
+          }
+        },
+        {
+          "fieldPath": "internal",
+          "type": {
+            "type": {
+              "string": {}
+            }
+          },
+          "nativeDataType": "Internal",
+          "nullable": false,
+          "description": "FR 2052A field: Internal",
+          "isPartOfKey": false,
+          "recursive": false
+        },
+        {
+          "fieldPath": "internalCounterparty",
+          "type": {
+            "type": {
+              "string": {}
+            }
+          },
+          "nativeDataType": "Maybe",
+          "nullable": false,
+          "description": "FR 2052A field: Internal Counterparty",
+          "isPartOfKey": false,
+          "recursive": false
+        }
+      ]
+    }
+  },
+  {
+    "entityType": "dataset",
+    "entityUrn": "urn:li:dataset:(urn:li:dataPlatform:lcr,fr2052a.supplemental.liquidity_risk_measurement,PROD)",
+    "aspectName": "status",
+    "changeType": "UPSERT",
+    "aspect": {
+      "__type": "Status",
+      "removed": false
+    }
+  },
+  {
+    "entityType": "dataset",
+    "entityUrn": "urn:li:dataset:(urn:li:dataPlatform:lcr,fr2052a.supplemental.liquidity_risk_measurement,PROD)",
+    "aspectName": "domains",
+    "changeType": "UPSERT",
+    "aspect": {
+      "__type": "Domains",
+      "domains": [
+        "urn:li:domain:federalreserve.gov"
+      ]
+    }
+  }
+]

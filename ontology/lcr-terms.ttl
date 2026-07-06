@@ -1,0 +1,125 @@
+@prefix skos:   <http://www.w3.org/2004/02/skos/core#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix dc:     <http://purl.org/dc/elements/1.1/> .
+@prefix lcr:    <http://fictionbank.example/ontology/lcr#> .
+
+# =============================================================================
+# Fiction Bank LCR — Domain Ontology
+#
+# Covers LCR-specific concepts defined by the regulatory model (Morphir/Elm).
+# These terms correspond to the FR 2052a logical model and the Morphir IR.
+#
+# Do NOT duplicate:
+#   Finance-domain terms  (urn:li:glossaryTerm:finance.*)
+#   Sec Lending terms     (urn:li:glossaryTerm:sec-lending.*)
+#
+# The generated Morphir SKOS taxonomy lives at
+# src/Regulation/US/taxonomy.ttl — that file captures data-element concepts
+# derived from the Elm source.  This file captures the higher-level
+# business/regulatory concepts that the Elm model implements.
+# =============================================================================
+
+lcr:LCRScheme a skos:ConceptScheme ;
+    skos:prefLabel "Fiction Bank LCR Terms"@en ;
+    dc:description "SKOS concept scheme for LCR regulatory concepts implemented in the Morphir model." ;
+    dc:created "2026-07-05" .
+
+# ---------------------------------------------------------------------------
+# LCR Core Components
+# ---------------------------------------------------------------------------
+
+lcr:LiquidityCoverageRatio a skos:Concept ;
+    skos:inScheme   lcr:LCRScheme ;
+    skos:prefLabel  "Liquidity Coverage Ratio"@en ;
+    skos:altLabel   "LCR"@en ;
+    skos:definition "Ratio of HQLA stock to net cash outflows over a 30-day stress period; must be ≥ 100% under Basel III."@en ;
+    skos:notation   "regulation.lcr.liquidity_coverage_ratio" .
+
+lcr:HQLAStock a skos:Concept ;
+    skos:inScheme   lcr:LCRScheme ;
+    skos:prefLabel  "HQLA Stock"@en ;
+    skos:altLabel   "High-Quality Liquid Asset Stock"@en ;
+    skos:definition "Unencumbered stock of high-quality liquid assets that can be converted into cash during a 30-day stress scenario."@en ;
+    skos:broader    lcr:LiquidityCoverageRatio ;
+    skos:notation   "regulation.lcr.hqla_stock" .
+
+lcr:NetCashOutflow a skos:Concept ;
+    skos:inScheme   lcr:LCRScheme ;
+    skos:prefLabel  "Net Cash Outflow"@en ;
+    skos:altLabel   "NCO"@en ;
+    skos:definition "Total expected cash outflows minus total expected cash inflows (capped at 75% of outflows) over the 30-day stress horizon."@en ;
+    skos:broader    lcr:LiquidityCoverageRatio ;
+    skos:notation   "regulation.lcr.net_cash_outflow" .
+
+# ---------------------------------------------------------------------------
+# HQLA Tiers
+# ---------------------------------------------------------------------------
+
+lcr:HQLATier a skos:Concept ;
+    skos:inScheme   lcr:LCRScheme ;
+    skos:prefLabel  "HQLA Tier"@en ;
+    skos:definition "Classification of a liquid asset by its eligibility and haircut under the LCR rule."@en ;
+    skos:broader    lcr:HQLAStock ;
+    skos:notation   "regulation.lcr.hqla_tier" .
+
+lcr:Level1Asset a skos:Concept ;
+    skos:inScheme   lcr:LCRScheme ;
+    skos:prefLabel  "Level 1 Asset"@en ;
+    skos:definition "HQLA eligible at 100% with no haircut: cash, central bank reserves, and qualifying sovereign bonds."@en ;
+    skos:broader    lcr:HQLATier ;
+    skos:notation   "regulation.lcr.level1_asset" .
+
+lcr:Level2AAsset a skos:Concept ;
+    skos:inScheme   lcr:LCRScheme ;
+    skos:prefLabel  "Level 2A Asset"@en ;
+    skos:definition "HQLA eligible at 85% (15% haircut): qualifying sovereign/GSE bonds and agency MBS."@en ;
+    skos:broader    lcr:HQLATier ;
+    skos:notation   "regulation.lcr.level2a_asset" .
+
+lcr:Level2BAsset a skos:Concept ;
+    skos:inScheme   lcr:LCRScheme ;
+    skos:prefLabel  "Level 2B Asset"@en ;
+    skos:definition "HQLA eligible at 50–75% (25–50% haircut): qualifying equities and non-GSE RMBS; capped at 15% of HQLA stock."@en ;
+    skos:broader    lcr:HQLATier ;
+    skos:notation   "regulation.lcr.level2b_asset" .
+
+# ---------------------------------------------------------------------------
+# Cash Flow Categories (FR 2052a schedules)
+# ---------------------------------------------------------------------------
+
+lcr:CashFlowCategory a skos:Concept ;
+    skos:inScheme   lcr:LCRScheme ;
+    skos:prefLabel  "Cash Flow Category"@en ;
+    skos:definition "FR 2052a schedule code identifying the regulatory treatment for an outflow or inflow (e.g. O.D, O.S, I.S)."@en ;
+    skos:notation   "regulation.lcr.cash_flow_category" .
+
+lcr:RunOffRate a skos:Concept ;
+    skos:inScheme   lcr:LCRScheme ;
+    skos:prefLabel  "Run-Off Rate"@en ;
+    skos:definition "Regulatory assumed percentage of a liability expected to be drawn or not renewed under the LCR stress scenario."@en ;
+    skos:broader    lcr:NetCashOutflow ;
+    skos:notation   "regulation.lcr.run_off_rate" .
+
+lcr:InboundCashInflow a skos:Concept ;
+    skos:inScheme   lcr:LCRScheme ;
+    skos:prefLabel  "Inbound Cash Inflow"@en ;
+    skos:definition "Expected cash inflow from a contractual counterparty over the 30-day stress horizon, subject to a 75% cap on total inflows."@en ;
+    skos:broader    lcr:NetCashOutflow ;
+    skos:notation   "regulation.lcr.inbound_cash_inflow" .
+
+# ---------------------------------------------------------------------------
+# FR 2052a Report
+# ---------------------------------------------------------------------------
+
+lcr:FR2052a a skos:Concept ;
+    skos:inScheme   lcr:LCRScheme ;
+    skos:prefLabel  "FR 2052a"@en ;
+    skos:definition "Federal Reserve liquidity monitoring report; 13 logical model tables covering assets, secured/unsecured outflows and inflows."@en ;
+    skos:notation   "regulation.lcr.fr2052a" .
+
+lcr:MorphirModel a skos:Concept ;
+    skos:inScheme   lcr:LCRScheme ;
+    skos:prefLabel  "Morphir LCR Model"@en ;
+    skos:definition "Elm functional specification of the LCR calculation rule, compiled to morphir-ir.json and used to generate the SKOS taxonomy at src/Regulation/US/taxonomy.ttl."@en ;
+    skos:related    lcr:FR2052a ;
+    skos:notation   "regulation.lcr.morphir_model" .
