@@ -1,62 +1,64 @@
 # Domain assignment for open-reg-tech-us-lcr (Fiction Bank LCR repo).
 # LCR is a Finance regulatory reporting function — datasets belong to Finance > Regulatory Reporting.
 # Run fiction-bank-firm-data-office/src/setup_domains.py first.
+#
+# Platform is "lcr" (defined by morphir_to_datahub.py).
+# Dataset names match the table_id formula: fr2052a.{section}.{table_name_snake}
 
 domain_urn: urn:li:domain:fiction-bank.finance.regulatory-reporting
 
 datasets:
-  # The 13 FR 2052a logical model tables emitted by morphir_to_datahub.py
-  - platform: datahub
-    name: regulation.US.LCR.Assets
+  - platform: lcr
+    name: fr2052a.inflows.assets
     description: "FR 2052a — HQLA assets (Schedule A)"
 
-  - platform: datahub
-    name: regulation.US.LCR.Inflows.Assets
-    description: "FR 2052a — Secured inflows from assets (Schedule I.A)"
-
-  - platform: datahub
-    name: regulation.US.LCR.Inflows.Other
-    description: "FR 2052a — Other inflows (Schedule I.O)"
-
-  - platform: datahub
-    name: regulation.US.LCR.Inflows.Secured
+  - platform: lcr
+    name: fr2052a.inflows.secured
     description: "FR 2052a — Secured lending inflows (Schedule I.S)"
 
-  - platform: datahub
-    name: regulation.US.LCR.Inflows.Unsecured
+  - platform: lcr
+    name: fr2052a.inflows.unsecured
     description: "FR 2052a — Unsecured inflows (Schedule I.U)"
 
-  - platform: datahub
-    name: regulation.US.LCR.Outflows.Assets
-    description: "FR 2052a — Asset outflows (Schedule O.A)"
+  - platform: lcr
+    name: fr2052a.inflows.other
+    description: "FR 2052a — Other inflows (Schedule I.O)"
 
-  - platform: datahub
-    name: regulation.US.LCR.Outflows.Deposits
+  - platform: lcr
+    name: fr2052a.outflows.deposits
     description: "FR 2052a — Deposit outflows (Schedule O.D)"
 
-  - platform: datahub
-    name: regulation.US.LCR.Outflows.Other
-    description: "FR 2052a — Other outflows (Schedule O.O)"
-
-  - platform: datahub
-    name: regulation.US.LCR.Outflows.Secured
+  - platform: lcr
+    name: fr2052a.outflows.secured
     description: "FR 2052a — Secured funding outflows (Schedule O.S)"
 
-  - platform: datahub
-    name: regulation.US.LCR.Outflows.Unsecured
-    description: "FR 2052a — Unsecured outflows (Schedule O.U)"
+  - platform: lcr
+    name: fr2052a.outflows.wholesale
+    description: "FR 2052a — Wholesale funding outflows (Schedule O.W)"
 
-  - platform: datahub
-    name: regulation.US.LCR.Outflows.Derivatives
-    description: "FR 2052a — Derivative outflows (Schedule O.Deriv)"
+  - platform: lcr
+    name: fr2052a.outflows.other
+    description: "FR 2052a — Other outflows (Schedule O.O)"
 
-  - platform: datahub
-    name: regulation.US.LCR.Outflows.CommittedFacilities
-    description: "FR 2052a — Committed facility drawdowns (Schedule O.CF)"
+  - platform: lcr
+    name: fr2052a.supplemental.balance_sheet
+    description: "FR 2052a — Balance sheet supplemental (Schedule S.BS)"
 
-  - platform: datahub
-    name: regulation.US.LCR.Calculations
-    description: "LCR ratio calculation — HQLA stock / net cash outflows"
+  - platform: lcr
+    name: fr2052a.supplemental.derivatives_collateral
+    description: "FR 2052a — Derivatives collateral supplemental (Schedule S.DC)"
+
+  - platform: lcr
+    name: fr2052a.supplemental.foreign_exchange
+    description: "FR 2052a — Foreign exchange supplemental (Schedule S.FX)"
+
+  - platform: lcr
+    name: fr2052a.supplemental.liquidity_risk_measurement
+    description: "FR 2052a — Liquidity risk measurement supplemental (Schedule S.LRM)"
+
+  - platform: lcr
+    name: fr2052a.supplemental.informational
+    description: "FR 2052a — Informational supplemental (Schedule S.I)"
 
 term_group:
   urn: urn:li:glossaryNode:RegulatoryReporting

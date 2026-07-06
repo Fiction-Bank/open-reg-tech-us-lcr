@@ -172,7 +172,7 @@ def _dataset_urn(table_id: str) -> str:
 
 
 def _table_mcps(mod_flat: str, section: str, table_name: str,
-                record_expr: list, custom_types: dict) -> list:
+                record_expr: list, custom_types: dict, domain_urn: str = "") -> list:
     table_id    = f"fr2052a.{section.lower()}.{table_name.lower().replace(' ', '_')}"
     dataset_urn = _dataset_urn(table_id)
     display_name = f"FR 2052A — {section} — {table_name}"
@@ -215,8 +215,11 @@ def _table_mcps(mod_flat: str, section: str, table_name: str,
             )),
         MetadataChangeProposalWrapper(entityUrn=dataset_urn,
             aspect=StatusClass(removed=False)),
-        MetadataChangeProposalWrapper(entityUrn=dataset_urn,
-            aspect=DomainsClass(domains=["urn:li:domain:federalreserve.gov"])),
+        *(
+            [MetadataChangeProposalWrapper(entityUrn=dataset_urn,
+                aspect=DomainsClass(domains=[domain_urn]))]
+            if domain_urn else []
+        ),
     ]
 
 
@@ -229,6 +232,8 @@ def main():
     parser.add_argument("--ir",     default="morphir-ir.json")
     parser.add_argument("--server", default="http://localhost:8080")
     parser.add_argument("--token",  default="")
+    parser.add_argument("--domain", default="",
+                        help="DataHub domain URN to tag each dataset (omit to skip domain aspect)")
     args = parser.parse_args()
 
     ir = json.loads(Path(args.ir).read_text())
@@ -265,7 +270,7 @@ def main():
             print(f"  SKIP {flat}: no Record alias found")
             continue
 
-        mcps = _table_mcps(flat, section, table_name, record_expr, custom_types)
+        mcps = _table_mcps(flat, section, table_name, record_expr, custom_types, domain_urn=args.domain)
         for mcp in mcps:
             emitter.emit(mcp)
         total_mcps += len(mcps)
