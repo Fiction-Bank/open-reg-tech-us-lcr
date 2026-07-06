@@ -1,7 +1,8 @@
-@prefix skos:   <http://www.w3.org/2004/02/skos/core#> .
-@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
-@prefix dc:     <http://purl.org/dc/elements/1.1/> .
-@prefix lcr:    <http://fictionbank.example/ontology/lcr#> .
+@prefix skos:    <http://www.w3.org/2004/02/skos/core#> .
+@prefix xsd:     <http://www.w3.org/2001/XMLSchema#> .
+@prefix dc:      <http://purl.org/dc/elements/1.1/> .
+@prefix lcr:     <http://fictionbank.example/ontology/lcr#> .
+@prefix finance: <http://fictionbank.example/ontology/finance#> .
 
 # =============================================================================
 # Fiction Bank LCR — Domain Ontology
@@ -33,7 +34,8 @@ lcr:LiquidityCoverageRatio a skos:Concept ;
     skos:prefLabel  "Liquidity Coverage Ratio"@en ;
     skos:altLabel   "LCR"@en ;
     skos:definition "Ratio of HQLA stock to net cash outflows over a 30-day stress period; must be ≥ 100% under Basel III."@en ;
-    skos:notation   "regulation.lcr.liquidity_coverage_ratio" .
+    skos:notation   "regulation.lcr.liquidity_coverage_ratio" ;
+    skos:exactMatch finance:LCRRatio .
 
 lcr:HQLAStock a skos:Concept ;
     skos:inScheme   lcr:LCRScheme ;
@@ -41,7 +43,8 @@ lcr:HQLAStock a skos:Concept ;
     skos:altLabel   "High-Quality Liquid Asset Stock"@en ;
     skos:definition "Unencumbered stock of high-quality liquid assets that can be converted into cash during a 30-day stress scenario."@en ;
     skos:broader    lcr:LiquidityCoverageRatio ;
-    skos:notation   "regulation.lcr.hqla_stock" .
+    skos:notation   "regulation.lcr.hqla_stock" ;
+    skos:closeMatch finance:HQLACollateral .
 
 lcr:NetCashOutflow a skos:Concept ;
     skos:inScheme   lcr:LCRScheme ;
@@ -49,7 +52,8 @@ lcr:NetCashOutflow a skos:Concept ;
     skos:altLabel   "NCO"@en ;
     skos:definition "Total expected cash outflows minus total expected cash inflows (capped at 75% of outflows) over the 30-day stress horizon."@en ;
     skos:broader    lcr:LiquidityCoverageRatio ;
-    skos:notation   "regulation.lcr.net_cash_outflow" .
+    skos:notation   "regulation.lcr.net_cash_outflow" ;
+    skos:exactMatch finance:NetCashOutflow .
 
 # ---------------------------------------------------------------------------
 # HQLA Tiers
@@ -67,21 +71,24 @@ lcr:Level1Asset a skos:Concept ;
     skos:prefLabel  "Level 1 Asset"@en ;
     skos:definition "HQLA eligible at 100% with no haircut: cash, central bank reserves, and qualifying sovereign bonds."@en ;
     skos:broader    lcr:HQLATier ;
-    skos:notation   "regulation.lcr.level1_asset" .
+    skos:notation   "regulation.lcr.level1_asset" ;
+    skos:exactMatch finance:Level1HQLA .
 
 lcr:Level2AAsset a skos:Concept ;
     skos:inScheme   lcr:LCRScheme ;
     skos:prefLabel  "Level 2A Asset"@en ;
     skos:definition "HQLA eligible at 85% (15% haircut): qualifying sovereign/GSE bonds and agency MBS."@en ;
     skos:broader    lcr:HQLATier ;
-    skos:notation   "regulation.lcr.level2a_asset" .
+    skos:notation   "regulation.lcr.level2a_asset" ;
+    skos:exactMatch finance:Level2AHQLA .
 
 lcr:Level2BAsset a skos:Concept ;
     skos:inScheme   lcr:LCRScheme ;
     skos:prefLabel  "Level 2B Asset"@en ;
     skos:definition "HQLA eligible at 50–75% (25–50% haircut): qualifying equities and non-GSE RMBS; capped at 15% of HQLA stock."@en ;
     skos:broader    lcr:HQLATier ;
-    skos:notation   "regulation.lcr.level2b_asset" .
+    skos:notation   "regulation.lcr.level2b_asset" ;
+    skos:exactMatch finance:Level2BHQLA .
 
 # ---------------------------------------------------------------------------
 # Cash Flow Categories (FR 2052a schedules)
@@ -98,14 +105,16 @@ lcr:RunOffRate a skos:Concept ;
     skos:prefLabel  "Run-Off Rate"@en ;
     skos:definition "Regulatory assumed percentage of a liability expected to be drawn or not renewed under the LCR stress scenario."@en ;
     skos:broader    lcr:NetCashOutflow ;
-    skos:notation   "regulation.lcr.run_off_rate" .
+    skos:notation   "regulation.lcr.run_off_rate" ;
+    skos:exactMatch finance:RunOffRate .
 
 lcr:InboundCashInflow a skos:Concept ;
     skos:inScheme   lcr:LCRScheme ;
     skos:prefLabel  "Inbound Cash Inflow"@en ;
     skos:definition "Expected cash inflow from a contractual counterparty over the 30-day stress horizon, subject to a 75% cap on total inflows."@en ;
     skos:broader    lcr:NetCashOutflow ;
-    skos:notation   "regulation.lcr.inbound_cash_inflow" .
+    skos:notation   "regulation.lcr.inbound_cash_inflow" ;
+    skos:exactMatch finance:InboundCashInflow .
 
 # ---------------------------------------------------------------------------
 # FR 2052a Report
