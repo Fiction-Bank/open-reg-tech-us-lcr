@@ -116,6 +116,13 @@ lcr:InboundCashInflow a skos:Concept ;
     skos:notation   "regulation.lcr.inbound_cash_inflow" ;
     skos:exactMatch finance:InboundCashInflow .
 
+lcr:MaturityMismatchAddOn a skos:Concept ;
+    skos:inScheme   lcr:LCRScheme ;
+    skos:prefLabel  "Maturity Mismatch Add-On"@en ;
+    skos:definition "An add-on to Net Cash Outflow equal to the largest cumulative net outflow amount within any 30-day window, minus the net day-30 cumulative outflow amount -- captures maturity mismatch risk that a simple day-30 net outflow figure would understate."@en ;
+    skos:broader    lcr:NetCashOutflow ;
+    skos:notation   "regulation.lcr.maturity_mismatch_add_on" .
+
 # ---------------------------------------------------------------------------
 # FR 2052a Report
 # ---------------------------------------------------------------------------
@@ -129,6 +136,6 @@ lcr:FR2052a a skos:Concept ;
 lcr:MorphirModel a skos:Concept ;
     skos:inScheme   lcr:LCRScheme ;
     skos:prefLabel  "Morphir LCR Model"@en ;
-    skos:definition "Elm functional specification of the LCR calculation rule, compiled to morphir-ir.json and used to generate the SKOS taxonomy at src/Regulation/US/taxonomy.ttl."@en ;
+    skos:definition "A formal, executable specification of the LCR calculation rule, maintained as the single source of truth for how the ratio is computed and used to generate this ontology's regulatory data-element terms."@en ;
     skos:related    lcr:FR2052a ;
     skos:notation   "regulation.lcr.morphir_model" .

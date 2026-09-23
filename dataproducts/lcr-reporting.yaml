@@ -1,0 +1,56 @@
+# Data Product — LCR / FR 2052a Reporting (Regulatory Reporting)
+#
+# This is the consuming side of three cross-domain handoffs -- see:
+#   finance/dataproducts/trade-blotter.yaml            (Balance Sheet & Treasury)
+#   sec-lending/dataproducts/consolidated-positions.yaml (Securities Lending)
+#   firm-data-office/dataproducts/benchmark-rates.yaml   (Firm Data Office)
+#
+# The 6G Mapping Layer ingests all three; the 13 FR 2052a schedule tables are
+# populated from it; the Morphir LCR calculation reads all 13 to produce the
+# final LCR ratio snapshots.
+#
+# NOTE: FINANCE.LIQUIDITY.lcr_entity_snapshots currently has no domain
+# assigned in the live instance (inject_lineage.py asserts its lineage but
+# never calls create_dataset_mcp with a domain_urn for it -- a pre-existing
+# gap, not something this Data Product file fixes). Assign it
+# urn:li:domain:1210 via the usual domain-assignment path before or alongside
+# upserting this file, or `--validate-assets` will still pass (the asset
+# exists) but the entity will show no domain in the UI.
+#
+# Sync with: datahub dataproduct upsert -f dataproducts/lcr-reporting.yaml --validate-assets
+
+id: lcr-reporting
+domain: urn:li:domain:1210
+display_name: LCR / FR 2052a Reporting
+description: |-
+  The firm's discretionary 6G mapping of trades, consolidated sec-lending
+  positions, and benchmark rates into the 13 FR 2052a schedule tables, then
+  the deterministic Morphir LCR calculation over those tables. Owned by
+  Regulatory Reporting.
+
+assets:
+  - urn:li:dataset:(urn:li:dataPlatform:logical,fiction-bank.lcr.fr2052a-6g-mapping,PROD)
+  - urn:li:dataset:(urn:li:dataPlatform:lcr,fr2052a.inflows.assets,PROD)
+  - urn:li:dataset:(urn:li:dataPlatform:lcr,fr2052a.inflows.other,PROD)
+  - urn:li:dataset:(urn:li:dataPlatform:lcr,fr2052a.inflows.secured,PROD)
+  - urn:li:dataset:(urn:li:dataPlatform:lcr,fr2052a.inflows.unsecured,PROD)
+  - urn:li:dataset:(urn:li:dataPlatform:lcr,fr2052a.outflows.deposits,PROD)
+  - urn:li:dataset:(urn:li:dataPlatform:lcr,fr2052a.outflows.other,PROD)
+  - urn:li:dataset:(urn:li:dataPlatform:lcr,fr2052a.outflows.secured,PROD)
+  - urn:li:dataset:(urn:li:dataPlatform:lcr,fr2052a.outflows.wholesale,PROD)
+  - urn:li:dataset:(urn:li:dataPlatform:lcr,fr2052a.supplemental.balance_sheet,PROD)
+  - urn:li:dataset:(urn:li:dataPlatform:lcr,fr2052a.supplemental.derivatives_collateral,PROD)
+  - urn:li:dataset:(urn:li:dataPlatform:lcr,fr2052a.supplemental.foreign_exchange,PROD)
+  - urn:li:dataset:(urn:li:dataPlatform:lcr,fr2052a.supplemental.informational,PROD)
+  - urn:li:dataset:(urn:li:dataPlatform:lcr,fr2052a.supplemental.liquidity_risk_measurement,PROD)
+  - urn:li:dataset:(urn:li:dataPlatform:logical,FINANCE.LIQUIDITY.lcr_entity_snapshots,PROD)
+
+output_ports:
+  - urn:li:dataset:(urn:li:dataPlatform:logical,FINANCE.LIQUIDITY.lcr_entity_snapshots,PROD)
+
+# owners intentionally left unset: "Regulatory Reporting Technology" in
+# domain-hierarchy.yaml is a team label, not a resolvable corpGroup URN in
+# this sandbox. Wire this to a real corpGroup once one exists.
+properties:
+  owning_team: Regulatory Reporting Technology
+  consumes_from: "Balance Sheet & Treasury (Trade Blotter), Securities Lending (Consolidated Securities Lending Positions), Firm Data Office (Benchmark Rates)"

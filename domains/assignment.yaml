@@ -8,57 +8,118 @@
 domain_urn: urn:li:domain:fiction-bank.finance.regulatory-reporting
 
 datasets:
+  # Medallion tier / authorized category per docs/adr/0003 (firm-data-office):
+  # this repo's team owns these per-dataset classification decisions.
+  #
+  # All 13 schedule tables: Gold (regulatory-filing-ready output) and
+  # Distributor (they repackage the 6G Mapping Layer's classification
+  # decisions into the specific FR 2052a schedule shape -- no new judgment
+  # beyond what the 6G layer already decided).
   - platform: lcr
     name: fr2052a.inflows.assets
     description: "FR 2052a — HQLA assets (Schedule A)"
+    medallion_tier: Gold
+    authorized_category: Distributor
 
   - platform: lcr
     name: fr2052a.inflows.secured
     description: "FR 2052a — Secured lending inflows (Schedule I.S)"
+    medallion_tier: Gold
+    authorized_category: Distributor
 
   - platform: lcr
     name: fr2052a.inflows.unsecured
     description: "FR 2052a — Unsecured inflows (Schedule I.U)"
+    medallion_tier: Gold
+    authorized_category: Distributor
 
   - platform: lcr
     name: fr2052a.inflows.other
     description: "FR 2052a — Other inflows (Schedule I.O)"
+    medallion_tier: Gold
+    authorized_category: Distributor
 
   - platform: lcr
     name: fr2052a.outflows.deposits
     description: "FR 2052a — Deposit outflows (Schedule O.D)"
+    medallion_tier: Gold
+    authorized_category: Distributor
 
   - platform: lcr
     name: fr2052a.outflows.secured
     description: "FR 2052a — Secured funding outflows (Schedule O.S)"
+    medallion_tier: Gold
+    authorized_category: Distributor
 
   - platform: lcr
     name: fr2052a.outflows.wholesale
     description: "FR 2052a — Wholesale funding outflows (Schedule O.W)"
+    medallion_tier: Gold
+    authorized_category: Distributor
 
   - platform: lcr
     name: fr2052a.outflows.other
     description: "FR 2052a — Other outflows (Schedule O.O)"
+    medallion_tier: Gold
+    authorized_category: Distributor
 
   - platform: lcr
     name: fr2052a.supplemental.balance_sheet
     description: "FR 2052a — Balance sheet supplemental (Schedule S.BS)"
+    medallion_tier: Gold
+    authorized_category: Distributor
 
   - platform: lcr
     name: fr2052a.supplemental.derivatives_collateral
     description: "FR 2052a — Derivatives collateral supplemental (Schedule S.DC)"
+    medallion_tier: Gold
+    authorized_category: Distributor
 
   - platform: lcr
     name: fr2052a.supplemental.foreign_exchange
     description: "FR 2052a — Foreign exchange supplemental (Schedule S.FX)"
+    medallion_tier: Gold
+    authorized_category: Distributor
 
   - platform: lcr
     name: fr2052a.supplemental.liquidity_risk_measurement
     description: "FR 2052a — Liquidity risk measurement supplemental (Schedule S.LRM)"
+    medallion_tier: Gold
+    authorized_category: Distributor
 
   - platform: lcr
     name: fr2052a.supplemental.informational
     description: "FR 2052a — Informational supplemental (Schedule S.I)"
+    medallion_tier: Gold
+    authorized_category: Distributor
+
+  # ── LCR chain endpoints (created ad hoc by firm-data-office/src/
+  # inject_lineage.py, not by a native ingestion source) ──────────────────
+  # Adding these here also closes a pre-existing gap: LCR_SNAPSHOTS previously
+  # had no domain assigned anywhere (inject_lineage.py asserts its lineage
+  # but never called create_dataset_mcp with a domain_urn for it). Listing it
+  # here means both assign_domains.py and assign_classification.py now cover
+  # it.
+  #
+  # SIX_G: Source, not Distributor -- "how this trade/position/rate
+  # combination is classified for FR 2052a purposes" is a new judgment this
+  # layer originates; nothing else in the firm decides that. Gold because
+  # it's the certified integration point shared via
+  # dataproducts/lcr-reporting.yaml.
+  - platform: logical
+    name: fiction-bank.lcr.fr2052a-6g-mapping
+    description: "FR 2052a 6G Mapping Layer — firm's discretionary classification of trades/positions/rates into FR 2052a schedules"
+    medallion_tier: Gold
+    authorized_category: Source
+
+  # LCR_SNAPSHOTS: Source -- the calculated LCR ratio is a new computed
+  # metric with no more-authoritative dataset elsewhere, even though it's
+  # deterministically derived from the 13 schedule tables.
+  - platform: logical
+    name: FINANCE.LIQUIDITY.lcr_entity_snapshots
+    description: "Morphir LCR calculation output — deterministic LCR ratio snapshots per legal entity"
+    medallion_tier: Gold
+    authorized_category: Source
 
 term_group:
   urn: urn:li:glossaryNode:RegulatoryReporting
