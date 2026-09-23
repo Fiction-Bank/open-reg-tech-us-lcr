@@ -1,0 +1,30 @@
+# FR 2052a Fields glossary ingestion recipe — Fiction Bank / open-reg-tech-us-lcr
+#
+# Loads the generated business-glossary YAML (../generated/fr2052a-fields-glossary.yml)
+# using DataHub's native `datahub-business-glossary` source -- the "loads to
+# DataHub on deploy" half of the Morphir-IR-driven pipeline:
+#
+#   src/Regulation/US/FR2052A/Fields/*.elm
+#     --[morphir-elm make]--> morphir-ir.json
+#       --[morphir_fields_to_glossary.py]--> generated/fr2052a-fields-glossary.yml
+#         --[this recipe]--> DataHub
+#
+# Regenerate the YAML (../morphir_fields_to_glossary.py) whenever morphir-ir.json
+# is recompiled, before re-running this recipe -- this recipe only loads
+# whatever is currently on disk, it does not run morphir-elm or the generator.
+#
+# Usage (run from the repo root -- `file:` below is relative to CWD, not
+# this recipe file's own location):
+#   export DATAHUB_GMS_TOKEN=<your-token>
+#   cd open-reg-tech-us-lcr && datahub ingest -c ingestion/fr2052a-fields-glossary-recipe.yml
+
+source:
+  type: "datahub-business-glossary"
+  config:
+    file: "generated/fr2052a-fields-glossary.yml"
+
+sink:
+  type: datahub-rest
+  config:
+    server: "${DATAHUB_GMS_URL:-http://localhost:8080}"
+    token: "${DATAHUB_GMS_TOKEN}"
